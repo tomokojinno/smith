@@ -7,9 +7,9 @@
     <meta name="description" content="小田原の手作りアイスクリーム工房『Smith's Creamery』" />
 
     <!-- Favicon Apple-touch-icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/png/icon_32.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="images/png/icon_32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="images/png/icon_16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icon_png/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon_png/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icon_png/icon_16.png" />
 
     <!-- OGP Open Graph Protocol -->
     <meta property="og:description" content="小田原の手作りアイスクリーム工房『Smith's Creamery』" />
@@ -48,16 +48,17 @@
           <img class="index__btn" src="./images/icon/menu_close.svg" alt="menuを閉じるボタン" />
           <nav class="index">
             <ul class="index__list">
-              <li class="index__item"><a href="#">Home</a></li>
+              <li class="index__item home"><a href="#">Home</a></li>
               <li class="index__item"><a href="#about">About</a></li>
               <li class="index__item"><a href="#flavor">Flavor</a></li>
+              <li class="index__item"><a href="#menu">Menu</a></li>
               <li class="index__item"><a href="#access">Access</a></li>
             </ul>
             <ul class="indexOrder__list">
               <li class="indexOrder__item">
                 <a class="indexOrder__btn pickUp" href="#pickUpOrder">
-                  <p class="main">Pick Up Today</p>
-                  <p class="sub">オンライン事前決済</p>
+                  <p class="main">Pick Up Today <span>!</span></p>
+                  <p class="sub">オンライン事前予約</p>
                 </a>
               </li>
               <li class="indexOrder__item">
@@ -86,21 +87,22 @@
               <h1 class="shopTitle"><img src="./images/main_visual/shop_title.svg" alt="Smith's Creamery Odawara since 2020" /></h1>
               <h2 class="catchCopy"><img src="./images/main_visual/chach_copy.svg" alt="Small Batch Handcrafted Delights" /></h2>
               <img class="keyVisual" src="./images/main_visual/key_img01.png" alt="アイスクリーム写真" />
-              <ul class="mainOrder">
-                <li class="mainOrder__item">
-                  <a class="mainOrder__btn pickUp" href="#pickUpOrder">
-                    <p class="main">Pick Up Today!</p>
-                    <p class="sub">オンライン事前決済</p>
-                  </a>
-                </li>
-                <li class="mainOrder__item">
-                  <a class="mainOrder__btn onlineShop" href="#onlineShop">
-                    <p class="main">Online Shop</p>
-                    <p class="sub">オンラインショップ</p>
-                  </a>
-                </li>
-              </ul>
+              <img class="keyVisual keyVisual_frame" src="./images/mainVisual_frame.png" alt="アイスクリームフレーム" />
             </div>
+            <ul class="mainOrder">
+              <li class="mainOrder__item">
+                <a class="mainOrder__btn pickUp" href="#pickUpOrder">
+                  <p class="main">Pick Up Today!</p>
+                  <p class="sub">オンライン事前決済</p>
+                </a>
+              </li>
+              <li class="mainOrder__item">
+                <a class="mainOrder__btn onlineShop" href="#onlineShop">
+                  <p class="main">Online Shop</p>
+                  <p class="sub">オンラインショップ</p>
+                </a>
+              </li>
+            </ul>
           </header>
 
           <section class="section section--about">
@@ -118,21 +120,24 @@
               <div class="flavor_card">
                 <p class="flavor_tag">Seasonal</p>
                 <h3 class="flavor_name section__subTitle">Chocolate<span class="flavor_name_jp">チョコレート</span></h3>
-                <img class="flavor_img" src="./images/flavor_image.png" alt="フレーバーのイメージ" />
+                <div class="flavor_img">
+                  <img class="flavor_ice" src="./images/flavor/row/chocolate.png" alt="チョコレートアイス" />
+                  <img class="flavor_cup" src="./images/cup.png" alt="ロゴ付きカップ" />
+                </div>
                 <p class="flavor_desc">
                   厳選カカオ100％仕様<br />
                   豊かなコクと滑らかな舌触りが特徴。深みのある甘さと、口の中で広がるリッチな味わいが魅力です
                 </p>
               </div>
               <div class="slider">
-                <img src="./images/icon/slider/arrow_back_ios.svg" alt="スライダ前矢印" />
+                <img src="./images/slider/arrow_back_ios.svg" alt="スライダ前矢印" />
 
-                <img src="./images/icon/slider/slider.svg" alt="スライダードット" />
-                <img src="./images/icon/slider/slider_active.svg" alt="スライダードットアクティブ" />
-                <img src="./images/icon/slider/slider.svg" alt="スライダードット" />
-                <img src="./images/icon/slider/slider.svg" alt="スライダードット" />
-                <img src="./images/icon/slider/slider.svg" alt="スライダードット" />
-                <img src="./images/icon/slider/arrow_forward_ios.svg" alt="スライダ後矢印" />
+                <img src="./images/slider/slider.svg" alt="スライダードット" />
+                <img src="./images/slider/slider_active.svg" alt="スライダードットアクティブ" />
+                <img src="./images/slider/slider.svg" alt="スライダードット" />
+                <img src="./images/slider/slider.svg" alt="スライダードット" />
+                <img src="./images/slider/slider.svg" alt="スライダードット" />
+                <img src="./images/slider/arrow_forward_ios.svg" alt="スライダ後矢印" />
               </div>
               <a class="btn" href="#about">すべてのflavorを見る</a>
             </div>
@@ -162,36 +167,21 @@
               </div>
               <ul class="steps">
                 <li class="step">
-                  <!-- <div class="step_title"> -->
-                  <!-- <img class="dot" src="./images/icon/dot.svg" alt="ステップ点" /> -->
                   <p class="step_tag">STEP1</p>
-                  <!-- </div> -->
                   <p class="step_desc">カップ/コーン/クッキーを選ぶ</p>
-                  <!-- <div class="step_title"> -->
-                  <!-- <img class="dot" src="./images/icon/dot.svg" alt="ステップ点" /> -->
                   <p class="step_tag step15">STEP1.5</p>
-                  <!-- </div> -->
                   <p class="step_desc">クッキーの種類を選ぶ</p>
                 </li>
                 <li class="step">
-                  <!-- <div class="step_title">
-                    <img class="dot" src="./images/icon/dot.svg" alt="ステップ点" /> -->
                   <p class="step_tag">STEP2</p>
-                  <!-- </div> -->
                   <p class="step_desc">フレーバを選ぶ</p>
                 </li>
                 <li class="step">
-                  <!-- <div class="step_title">
-                    <img class="dot" src="./images/icon/dot.svg" alt="ステップ点" /> -->
                   <p class="step_tag">STEP3</p>
-                  <!-- </div> -->
                   <p class="step_desc">お好みトッピングを選ぶ</p>
                 </li>
                 <li class="step">
-                  <!-- <div class="step_title">
-                    <img class="dot" src="./images/icon/dot.svg" alt="ステップ点" /> -->
                   <p class="step_tag step_last">Enjoy!!</p>
-                  <!-- </div> -->
                 </li>
               </ul>
             </div>

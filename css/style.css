@@ -152,7 +152,7 @@ header
     padding-top: 58px;
     position: relative;
 }
-.main span{
+.main > span{
     display: none;
 }
 .indexOrder__btn .sub { 
@@ -757,7 +757,6 @@ main
     }   
 }/* PC 769px 以上の画面サイズで適用されるスタイル */
 
-
 /* section */
 /* section common */
 .section{
@@ -823,6 +822,19 @@ main
     transform: translateY(4px);
     box-shadow: none;
 }
+/* section common PC*/
+@media screen and (min-width:769px){
+    .section{
+        padding: 120px 0;
+    }
+    .section__title{
+        font-size: 4.0rem;
+    }
+    .section__subTitle{
+        font-size: 2.0rem;
+    }
+}
+/* PC 769px 以上の画面サイズで適用されるスタイル */
 
 /* section About */
 .section--about .section__title{
@@ -834,10 +846,42 @@ main
 .section--about .btn{
     margin-top: 40px;
 }
-.section--about p{
+.section--about .txt{
     text-indent: 1.6rem;
+    text-align: left;
     margin-bottom: 0.6rem;
+    max-width: 500px;
 }
+.section--about p{
+    margin-bottom: 6px;
+}
+.section--about br{
+    display: none;
+}
+/* section About PC*/
+@media screen and (min-width:769px){
+    .section--about .section__title{
+        margin-bottom: 80px;
+    }
+    .section--about .section__subTitle{
+        margin-bottom: 40px;
+    }
+    .section--about .btn{
+        margin-top: 80px;
+    }
+    .section--about .txt{
+        text-indent: 0;
+        text-align: center;
+        margin-bottom: 0.6rem;
+        max-width: 840px;
+    }
+    
+    .section--about br{
+        display: flex;
+    }
+
+}
+/* PC 769px 以上の画面サイズで適用されるスタイル */
 
 /* section Flavor */
 .section--flavor{
@@ -846,32 +890,136 @@ main
     border-radius: 50% 50%;
     transform: translateX(-75vw); /* (width-100vw/2) */
 }
+.section--flavor .section__title{
+    margin-bottom: 40px;
+}
 .flavor_contents{
     /* transform: translateX(75vw); */
     display: flex;
     flex-direction: column;
     margin: auto;
 }
-.section--flavor .section__title{
-    margin-bottom: 40px;
+.flavor_tabs{
+    display: none;
 }
-.section--flavor .section__subTitle{
-    margin-bottom: 20px;
+.flavor_labels{
+    display: none;
 }
-.flavor_card{
+.flavor_cards{
+    width: 100vw;
+    background-color: #DDF2C3;
+    overflow: hidden;
+}
+.card{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 3.5vw;
     width: 77.8vw;
+    max-width: 384px;
+    /* height: 530px; */
+    padding: 20px 3.5vw;
 
     border-radius: 15px;
     background: #FFF;
     box-shadow: 0px 3px 3px 0px rgba(53, 75, 78, 0.60);
-
-    max-width: 500px;
 }
-.flavor_tag{
+.flavor_card.slick-slide{
+    width: 100vw !important;
+    align-items: center;
+    display: flex !important;
+    justify-content: center;
+    margin: 10px 0;
+}
+/* arrow-setting */
+.slider{
+    width: 100vw;
+    position: relative;
+
+    margin-top: 10px;
+}
+.slider .slick-arrow {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 0;
+    position: absolute;
+
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.slider .slick-arrow::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #C6D1D2;
+    border-width: 3px 3px 0 0;
+    position: absolute;
+    top: 24px;
+    transform: rotate(45deg);
+}
+.slider .slick-next {
+    right: 10vw;
+}
+.slider .slick-prev {
+    left: 10vw;
+}
+.slider .slick-next::before {
+    left: 20px;
+}
+.slider .slick-prev::before {
+    border-width: 0 0 3px 3px;
+    right: 22px;
+}
+/* end arrow-setting */
+/* dots-setting */
+.slider .slick-dots {
+    text-align: center;
+}
+.slider .slick-dots li {
+    display: inline-block;
+}
+.slider .slick-dots button {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 6px;
+    font-size: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background: #C6D1D2;
+    border-radius: 50%;
+}
+.slider .slick-dots .slick-active button {
+    background: #F25318;
+}
+/* ------end of slick---- */
+.flavor_seasonal_tag.regular{
+    display: block;
+    width: 80px;
+    height: 20px;
+
+    font-family: "Noto Sans";
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.065rem;
+
+    background-color: #DDF2C3;
+    text-align: center;
+    border-radius: 3px;
+
+    margin-bottom: 20px;
+    opacity: 0;
+}
+.flavor_seasonal_tag.seasonal{
     display: block;
     width: 80px;
     height: 20px;
@@ -924,39 +1072,209 @@ main
 .flavor_desc{
     display: flex;
     text-align: center;
-    margin-top: 20px;
-}
-.slider{
-    margin-top: 20px;
-    display: flex;
-    gap: 11px;
+    margin: 20px 10px 10px 10px;
+    /* text-indent: 1.8rem; */
+    font-size: 1.4rem;
+    line-height: 1.8;
+    height: 130px;
     align-items: center;
-    justify-content: center;
 }
 .section--flavor .btn{
     /* margin-top: 40px; */
     margin: 40px auto 0px;
 }
+/* section Flavor PC */
+@media screen and (min-width:769px) {
+    .section--flavor{
+        width: 100%;
+        background-color: #DDF2C3;
+        border-radius: 0; 
+        transform: none; 
+        /* (width-100vw/2) */
+    }
+    .section--flavor > .section__title{
+        margin-bottom: 90px;
+    }
+    .flavor_contents{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        gap: 80px;
+    }
+    .flavor_tabs{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        margin: auto;
+    }
+    #tab_all, 
+    #tab_regular, 
+    #tab_seasonal{
+        position: relative;
+    }
+    #tab_all.active::before,
+    #tab_regular.active::before,
+    #tab_seasonal.active::before
+    {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 21.5px;
+        width: 130%;
+        height: 2px;
+        transform: translateX(-50%);
+        background-color: #05343B;
+
+    }
+    #tab_all:hover, 
+    #tab_regular:hover, 
+    #tab_seasonal:hover{
+        transform: scale(1.1, 1.1);
+    }
+    #tab_all.active:hover,
+    #tab_regular.active:hover,
+    #tab_seasonal.active:hover{
+        transform: none;
+    }
+    
+    .flavor_tabs h3{
+        font-family: "Playwrite AU VIC";
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: 0.09rem;
+    }
+    .flavor_tabs span{
+        font-family: "Playwrite AU VIC";
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: 0.06rem;
+    }
+    .flavor_labels{
+        display: flex;
+        width: 420px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 20px;
+        margin: auto;
+        align-content: flex-start;
+    }
+    .flavor_label{
+        width: 190px;
+        height: 58px;
+        background-color: #FFF;
+        border-radius: 10rem 1rem 1rem 10rem;
+        border:  1px solid rgba(198, 209, 210, 0.30);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        margin: auto;
+
+        position: relative;
+    }
+    .flavor_label_name::before{
+        content: '';
+        width: 46px;
+        height: 46px;
+        /* background-image: url(../images/flavor/circle/circle_chocolate.png); */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 50%;
+        left: 0.5rem;
+        transform: translateY(-50%);
+    }
+    .chocolate > .flavor_label_name::before{
+        background-image: url(../images/flavor/circle/circle_chocolate.png);
+    }
+    .mikan > .flavor_label_name::before{
+        background-image: url(../images/flavor/circle/circle_mikan.png);
+    }
+    .mocha > .flavor_label_name::before{
+        background-image: url(../images/flavor/circle/circle_mocha.png);
+    }
+    .plum > .flavor_label_name::before{
+        background-image: url(../images/flavor/circle/circle_plum.png);
+    }
+    .matcha > .flavor_label_name::before{
+        background-image: url(../images/flavor/circle/circle_matcha.png);
+    }
+    .vanilla > .flavor_label_name::before{
+        background-image: url(../images/flavor/circle/circle_vanilla.png);
+    }
+    .pistachio > .flavor_label_name::before{
+        background-image: url(../images/flavor/circle/circle_pistachio.png);
+    }
+    .strawberry > .flavor_label_name::before{
+        background-image: url(../images/flavor/circle/circle_strawberry.png);
+    }
+    .lemon > .flavor_label_name::before{
+        background-image: url(../images/flavor/circle/circle_lemon.png);
+    }
+    .guava > .flavor_label_name::before{
+        background-image: url(../images/flavor/circle/circle_guava.png);
+    }
+    .flavor_label_name > h3{
+        padding-left: 60px;
+        font-family: "Playwrite AU VIC";
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: 0.09rem;
+        text-align: center;
+    }
+    .flavor_label_name > h3 > span{
+        font-family: "Noto Sans";
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.2; /* 16.8px */
+        letter-spacing: 0.07rem;
+    }
+    .flavor_cards{
+        width: 100vw;
+        background-color: #DDF2C3;
+        overflow: hidden;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 77.8vw;
+        max-width: 384px;
+        /* height: 530px; */
+        padding: 20px 3.5vw;
+    
+        border-radius: 15px;
+        background: #FFF;
+        box-shadow: 0px 3px 3px 0px rgba(53, 75, 78, 0.60);
+    }
+    .slider{
+        display: none;
+    }
+    .section--flavor .btn{
+        /* margin-top: 40px; */
+        margin: 90px auto 0px;
+    }
+
+}
+/* PC 769px 以上の画面サイズで適用されるスタイル */
 
 /* section Menu */
-.section--menu .section__title{
+.section--menu > .section__title{
     margin-bottom: 40px;
 }
-.section--menu .section__subTitle{
+.card_title{
     margin-bottom: 20px;
-}
-.menu_card .section__subTitle{
-    margin-bottom: 0;
-    font-size: 1.6rem;
-    letter-spacing: -0.08rem;
-}
-.menu_jp{
-    text-align: center;
-    font-size: 1.2rem;
 }
 .menu_card{
     width: 88vw;
     min-width: 315px;
+    max-width: 370px;
     border-radius: 15px;
     border: 1px solid rgba(198, 209, 210, 0.30);
     background: #FFF;
@@ -964,6 +1282,11 @@ main
 
     padding-bottom: 30px;
     margin-bottom: 20px;
+}
+.menu_title.section__subTitle{
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    letter-spacing: -0.08rem;
 }
 .menu_title{
     display: block;
@@ -982,9 +1305,10 @@ main
     display: flex;
     flex-direction: column;
 }
-.menu_jp{
-    font-size: 1.2rem;
-    letter-spacing: 0.06rem;
+.menu_en.section__subTitle{
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    letter-spacing: -0.08rem;
 }
 .cup img{
     width: 98.62px;
@@ -1002,11 +1326,15 @@ main
     box-sizing: content-box;
     padding-top: 15px;
 }
+.menu_jp{
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.06rem;
+}
 .steps{
     display: block;
-    width: 74vw;
     padding: 0 0 0 13px;
-    margin: auto;
+    margin: 0 30px;
     /* border-left: thin solid; */
     position: relative;
 }
@@ -1089,18 +1417,18 @@ main
     width: 90px;
     height: 75.842px;
     justify-content: center;
+    /* margin-left: 35px; */
 }
 .toGo_paint img{
     display: flex;
     width: 90px;
     height: 98.014px;
     justify-content: center;
-    align-items: center;
+    /* margin-left: 35px; */
 }
 .menu_cup{
     display: flex;
-    width: 70vw;
-    margin: auto;
+    margin: 0 35px;
 }
 .cup_en{
     display: flex;
@@ -1108,6 +1436,7 @@ main
     margin: auto;
 }
 .cup_jp{
+    display: block;
     font-family: "Zen Kaku Gothic New";
     font-size: 1.2rem;
     font-weight: 400;
@@ -1118,10 +1447,48 @@ main
 }
 .toGo_single{
     margin-top: 20px;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
+}
+.toGo_menu .menu_card{
+   padding-bottom: 0;
 }
 .menu_card_ToGo{
     padding-bottom: 10px;
+}
+/* section Menu PC */
+@media screen and (min-width:769px) {
+    .menus{
+        display: flex;
+        gap: 80px;
+    }
+    .steps{
+        display: none;
+    }
+    .menu_card{
+        height: 280px;
+        margin: 0;
+        padding: 0;
+    }
+    .menu_content{
+        height: 249px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .columns{
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 0;
+    }
+    .rows{
+        margin: auto;
+    }
+
+    .menu_cup.toGo_single{
+        margin-top: 0;
+        margin-bottom: 20px;
+
+    }
 }
 
 /* section order__online */

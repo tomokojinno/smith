@@ -33,6 +33,9 @@
     <link rel="stylesheet" href="./css/destyle.css" />
     <link rel="stylesheet" href="./css/style.css" />
 
+    <!-- plugin -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
     <!-- テキストを画像で使う時はp or hで囲む -->
     <!-- figure文章とセットの時　divでもいい -->
   </head>
@@ -105,96 +108,192 @@
             </ul>
           </header>
 
-          <section class="section section--about">
+          <section class="section section--about" id="about">
             <h2 class="section__title">About</h2>
             <h3 class="section__subTitle">Pure Taste, Pure Quality</h3>
-            <p>アイスクリームが大好きな店主Smithさんが、故郷アメリカのアイスクリームを日本で食べたくて小田原に小さなアイスクリームショップを開きました。</p>
-            <p>地元の小規模農家から厳選した新鮮な乳製品や季節のフルーツのみを使用し、毎日手作りで丁寧に製造しています。</p>
-            <p>ここ小田原でしか味わえない美味しいスイーツをぜひ食べに来てください。</p>
+            <div class="txt">
+              <p>
+                アイスクリームが大好きな店主Smithさんが、故郷アメリカのアイスクリームを日本で食べたくて<br />小田原に小さなアイスクリームショップを開きました。
+              </p>
+              <p>地元の小規模農家から厳選した新鮮な乳製品や季節のフルーツのみを使用し、<br />毎日手作りで丁寧に製造しています。</p>
+              <p>ここ小田原でしか味わえない美味しいスイーツをぜひ食べに来てください。</p>
+            </div>
             <a class="btn" href="#about">詳しく見る</a>
           </section>
 
           <section class="section section--flavor">
+            <h2 class="section__title">Flavor</h2>
             <div class="flavor_contents">
-              <h2 class="section__title">Flavor</h2>
-              <div class="flavor_card">
-                <p class="flavor_tag">Seasonal</p>
-                <h3 class="flavor_name section__subTitle">Chocolate<span class="flavor_name_jp">チョコレート</span></h3>
-                <div class="flavor_img">
-                  <img class="flavor_ice" src="./images/flavor/row/chocolate.png" alt="チョコレートアイス" />
-                  <img class="flavor_cup" src="./images/cup.png" alt="ロゴ付きカップ" />
+              <div class="flavor_tabs">
+                <h3 id="tab_all" class="active">All<span>すべて</span></h3>
+                <h3 id="tab_regular">Regular<span>レギュラー</span></h3>
+                <h3 id="tab_seasonal">Seasonal<span>季節限定</span></h3>
+              </div>
+              <div class="flavor_labels">
+                <div class="flavor_label chocolate regular">
+                  <div class="flavor_label_name">
+                    <h3>Chocolate<span>チョコレート</span></h3>
+                  </div>
                 </div>
-                <p class="flavor_desc">
-                  厳選カカオ100％仕様<br />
-                  豊かなコクと滑らかな舌触りが特徴。深みのある甘さと、口の中で広がるリッチな味わいが魅力です
-                </p>
+                <div class="flavor_label mocha regular">
+                  <div class="flavor_label_name">
+                    <h3>Mocha<span>モカ</span></h3>
+                  </div>
+                </div>
+                <div class="flavor_label matcha regular">
+                  <div class="flavor_label_name">
+                    <h3>Matcha<span>抹茶</span></h3>
+                  </div>
+                </div>
+                <div class="flavor_label vanilla regular">
+                  <div class="flavor_label_name">
+                    <h3>Vanilla<span>バニラ</span></h3>
+                  </div>
+                </div>
+                <div class="flavor_label pistachio regular">
+                  <div class="flavor_label_name">
+                    <h3>Pistachio<span>ピスタチオ</span></h3>
+                  </div>
+                </div>
+                <div class="flavor_label strawberry regular">
+                  <div class="flavor_label_name">
+                    <h3>Strawberry<span>ストロベリー</span></h3>
+                  </div>
+                </div>
+                <div class="flavor_label lemon seasonal">
+                  <div class="flavor_label_name">
+                    <h3>Lemon<span>レモン</span></h3>
+                  </div>
+                </div>
+                <div class="flavor_label guava seasonal">
+                  <div class="flavor_label_name">
+                    <h3>Guava<span>グアバ</span></h3>
+                  </div>
+                </div>
+                <div class="flavor_label mikan seasonal">
+                  <div class="flavor_label_name">
+                    <h3>Mikan<span>みかん</span></h3>
+                  </div>
+                </div>
+                <div class="flavor_label plum seasonal">
+                  <div class="flavor_label_name">
+                    <h3>Plum<span>梅</span></h3>
+                  </div>
+                </div>
               </div>
-              <div class="slider">
-                <img src="./images/slider/arrow_back_ios.svg" alt="スライダ前矢印" />
-
-                <img src="./images/slider/slider.svg" alt="スライダードット" />
-                <img src="./images/slider/slider_active.svg" alt="スライダードットアクティブ" />
-                <img src="./images/slider/slider.svg" alt="スライダードット" />
-                <img src="./images/slider/slider.svg" alt="スライダードット" />
-                <img src="./images/slider/slider.svg" alt="スライダードット" />
-                <img src="./images/slider/arrow_forward_ios.svg" alt="スライダ後矢印" />
+              <div class="flavor_cards">
+                <div class="flavor_card">
+                  <div class="card chocolate">
+                    <p class="flavor_seasonal_tag regular">Seasonal</p>
+                    <h3 class="flavor_name section__subTitle">Chocolate<span class="flavor_name_jp">チョコレート</span></h3>
+                    <div class="flavor_img">
+                      <img class="flavor_ice" src="./images/flavor/row/chocolate.png" alt="チョコレートアイス" />
+                      <img class="flavor_cup" src="./images/cup.png" alt="ロゴ付きカップ" />
+                    </div>
+                    <p class="flavor_desc">
+                      厳選カカオ100％仕様<br />
+                      豊かなコクと滑らかな舌触りが特徴。深みのある甘さと、口の中で広がるリッチな味わいが魅力です
+                    </p>
+                  </div>
+                </div>
+                <div class="flavor_card">
+                  <div class="card vanilla">
+                    <p class="flavor_seasonal_tag regular">Seasonal</p>
+                    <h3 class="flavor_name section__subTitle">Vanilla<span class="flavor_name_jp">バニラ</span></h3>
+                    <div class="flavor_img">
+                      <img class="flavor_ice" src="./images/flavor/row/vanilla.png" alt="バニラアイス" />
+                      <img class="flavor_cup" src="./images/cup.png" alt="ロゴ付きカップ" />
+                    </div>
+                    <p class="flavor_desc">
+                      高品質なバニラビーンズを使用<br />
+                      ミルクをたっぷり使用し、自然な甘さと滑らかな口当たり<br />いつまでも愛される美味しさです
+                    </p>
+                  </div>
+                </div>
+                <div class="flavor_card">
+                  <div class="card mikan">
+                    <p class="flavor_seasonal_tag seasonal">Seasonal</p>
+                    <h3 class="flavor_name section__subTitle">Mikan<span class="flavor_name_jp">みかん</span></h3>
+                    <div class="flavor_img">
+                      <img class="flavor_ice" src="./images/flavor/row/mikan.png" alt="みかんアイス" />
+                      <img class="flavor_cup" src="./images/cup.png" alt="ロゴ付きカップ" />
+                    </div>
+                    <p class="flavor_desc">
+                      新鮮なみかんの爽やかな風味と、まろやかな口当たりが特徴です<br />
+                      みずみずしさと甘さのバランスが絶妙で、季節感溢れるフルーティーな味わいです
+                    </p>
+                  </div>
+                </div>
               </div>
-              <a class="btn" href="#about">すべてのflavorを見る</a>
+              <div class="slider"></div>
             </div>
+            <a class="btn" href="#about">すべてのflavorを見る</a>
           </section>
 
           <section class="section section--menu">
             <h2 class="section__title">Menu</h2>
-            <h3 class="section__subTitle">Eat in</h3>
-            <div class="menu_card">
-              <span class="menu_title section__subTitle">MENU</span>
-              <div class="columns">
-                <div class="column cup">
-                  <span class="menu_en section__subTitle">Cup</span>
-                  <span class="menu_jp">カップ</span>
-                  <img src="./images/menu/cup_single.svg" alt="シングルカップ" />
-                </div>
-                <div class="column cone">
-                  <span class="menu_en section__subTitle">Cone</span>
-                  <span class="menu_jp">コーン</span>
-                  <img src="./images/menu/corn_single.svg" alt="シングルコーン" />
-                </div>
-                <div class="column cookie">
-                  <span class="menu_en section__subTitle">Cookie sand</span>
-                  <span class="menu_jp">クッキーサンド</span>
-                  <img src="./images/menu/cookie_sand.svg" alt="クッキーサンド" />
+            <div class="menus">
+              <div class="eatIn_menu">
+                <h3 class="section__subTitle card_title">Eat in</h3>
+                <div class="menu_card">
+                  <p class="menu_title section__subTitle">MENU</p>
+                  <div class="menu_content">
+                    <div class="columns">
+                      <div class="column cup">
+                        <p class="menu_en section__subTitle">Cup</p>
+                        <p class="menu_jp">カップ</p>
+                        <img src="./images/menu/cup_single.svg" alt="シングルカップ" />
+                      </div>
+                      <div class="column cone">
+                        <p class="menu_en section__subTitle">Cone</p>
+                        <p class="menu_jp">コーン</p>
+                        <img src="./images/menu/corn_single.svg" alt="シングルコーン" />
+                      </div>
+                      <div class="column cookie">
+                        <p class="menu_en section__subTitle">Cookie sand</p>
+                        <p class="menu_jp">クッキーサンド</p>
+                        <img src="./images/menu/cookie_sand.svg" alt="クッキーサンド" />
+                      </div>
+                    </div>
+                    <ul class="steps">
+                      <li class="step">
+                        <p class="step_tag">STEP1</p>
+                        <p class="step_desc">カップ/コーン/クッキーを選ぶ</p>
+                        <p class="step_tag step15">STEP1.5</p>
+                        <p class="step_desc">クッキーの種類を選ぶ</p>
+                      </li>
+                      <li class="step">
+                        <p class="step_tag">STEP2</p>
+                        <p class="step_desc">フレーバを選ぶ</p>
+                      </li>
+                      <li class="step">
+                        <p class="step_tag">STEP3</p>
+                        <p class="step_desc">お好みトッピングを選ぶ</p>
+                      </li>
+                      <li class="step">
+                        <p class="step_tag step_last">Enjoy!!</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-              <ul class="steps">
-                <li class="step">
-                  <p class="step_tag">STEP1</p>
-                  <p class="step_desc">カップ/コーン/クッキーを選ぶ</p>
-                  <p class="step_tag step15">STEP1.5</p>
-                  <p class="step_desc">クッキーの種類を選ぶ</p>
-                </li>
-                <li class="step">
-                  <p class="step_tag">STEP2</p>
-                  <p class="step_desc">フレーバを選ぶ</p>
-                </li>
-                <li class="step">
-                  <p class="step_tag">STEP3</p>
-                  <p class="step_desc">お好みトッピングを選ぶ</p>
-                </li>
-                <li class="step">
-                  <p class="step_tag step_last">Enjoy!!</p>
-                </li>
-              </ul>
-            </div>
-            <h3 class="section__subTitle">to Go</h3>
-            <div class="menu_card menu_card_ToGo">
-              <p class="menu_title section__subTitle">MENU</p>
-              <div class="menu_cup toGo_single">
-                <img src="./images/menu/togo_cup.svg" alt="持ち帰りカップ" />
-                <p class="cup_en section__subTitle">Single (150 ml)<span class="cup_jp">シングル</span></p>
-              </div>
-              <div class="menu_cup toGo_paint">
-                <img src="./images/menu/togo_paint.svg" alt="持ち帰りパイント" />
-                <p class="cup_en section__subTitle">Pints (473 ml)<span class="cup_jp">パイント</span></p>
+              <div class="toGo_menu">
+                <h3 class="section__subTitle card_title">to Go</h3>
+                <div class="menu_card">
+                  <p class="menu_title section__subTitle">MENU</p>
+                  <div class="menu_content">
+                    <div class="rows">
+                      <div class="menu_cup toGo_single">
+                        <img src="./images/menu/togo_cup.svg" alt="持ち帰りカップ" />
+                        <p class="cup_en section__subTitle">Single (150 ml)<span class="cup_jp">シングル</span></p>
+                      </div>
+                      <div class="menu_cup toGo_paint">
+                        <img src="./images/menu/togo_paint.svg" alt="持ち帰りパイント" />
+                        <p class="cup_en section__subTitle">Pints (473 ml)<span class="cup_jp">パイント</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -281,6 +380,8 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script src="./js/main.js"></script>
   </body>

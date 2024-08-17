@@ -875,7 +875,6 @@ main
         margin-bottom: 0.6rem;
         max-width: 840px;
     }
-    
     .section--about br{
         display: flex;
     }
@@ -916,6 +915,7 @@ main
     align-items: center;
     width: 77.8vw;
     max-width: 384px;
+    min-width: 295px;
     /* height: 530px; */
     padding: 20px 3.5vw;
 
@@ -1236,7 +1236,8 @@ main
         letter-spacing: 0.07rem;
     }
     .flavor_cards{
-        width: 100vw;
+        width: 28vw;
+        max-width: 400px;
         background-color: #DDF2C3;
         overflow: hidden;
     }
@@ -1246,12 +1247,20 @@ main
         align-items: center;
         width: 77.8vw;
         max-width: 384px;
+        min-width: 300px;
         /* height: 530px; */
         padding: 20px 3.5vw;
     
         border-radius: 15px;
         background: #FFF;
         box-shadow: 0px 3px 3px 0px rgba(53, 75, 78, 0.60);
+    }
+    .flavor_card.slick-slide{
+        width: 27vw !important;
+        align-items: center;
+        display: flex !important;
+        justify-content: center;
+        margin: 10px 20px;
     }
     .slider{
         display: none;
@@ -1261,8 +1270,7 @@ main
         margin: 90px auto 0px;
     }
 
-}
-/* PC 769px 以上の画面サイズで適用されるスタイル */
+}/* PC 769px 以上の画面サイズで適用されるスタイル */
 
 /* section Menu */
 .section--menu > .section__title{
@@ -1457,6 +1465,12 @@ main
 }
 /* section Menu PC */
 @media screen and (min-width:769px) {
+    .section--menu > .section__title{
+        margin-bottom: 90px;
+    }
+    .card_title{
+        margin-bottom: 40px;
+    }
     .menus{
         display: flex;
         gap: 80px;
@@ -1497,17 +1511,121 @@ main
     background-color: #DDF2C3;
     border-radius: 50% 50%;
     transform: translateX(-10vw); /* (width-100vw/2) */
+    .section__title{
+        margin-bottom: 40px;
+    };
+    .mainOrder__btn{
+        margin: 0 auto 20px;
+    };
+    .pickUp_desc{
+        text-align: center;
+        width: 77vw;
+        margin: auto;
+    };
 }
-.section--order_online .section__title{
-    margin-bottom: 40px;
+.pc_desc{
+    display: none;
 }
-.section--order_online .mainOrder__btn{
-    margin: 0 auto 20px;
+.order_online_steps{
+    display: none;
 }
-.section--order_online .pickUp_desc{
-    text-align: center;
-    width: 77vw;
+@media screen and (min-width:769px) {
+    .section--order_online{
+        width: 100vw;
+        background-color: #DDF2C3;
+        border-radius: 0;
+        transform: none;
+        .section__title{
+            margin-bottom: 80px;
+        };
+        .pickUp_desc{
+            text-align: center;
+            width: 100vw;
+            margin-bottom: 70px;
+        };
+    }
+    .pc_desc{
+        display: block;
+    }
+    .sf_desc{
+        display: none;
+    }
+
+    .order_online_steps{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-bottom: 80px;
+    }
+    .order_online_step{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding-right: 4.5vw;
+        flex-shrink: 0;
+
+        h3{
+            text-align: center;
+            font-family: "Playwrite AU VIC";
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            letter-spacing: 0.09rem;
+        };
+        h4{
+            text-align: center;
+            font-family: "Zen Kaku Gothic New";
+            font-size: 1.2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.6; /* 19.2px */
+            letter-spacing: 0.06rem;
+            margin-top: 3px;
+            margin-bottom: 20px;
+        };
+        p{
+            text-align: center;
+            font-family: "Zen Kaku Gothic New";
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.60; /* 25.6px */
+            letter-spacing: 0.08rem;
+        };
+        img{
+            text-align: center;
+            width: 12.5vw;
+            height: 12.5vw;
+            margin-top: 17px;
+            min-width: 100px;
+            min-height: 100px;
+        };
+    }
+    .order_online_step::after{
+        content: '';
+        display: flex;
+        width: 12px;
+        height: 12px;
+        border: 1px solid #05343B;
+        border-width: 3px 3px 0 0;
+        position: absolute;
+        top: 25px;
+        right: 2.25vw;
+        
+        transform: rotate(45deg);
+    }
+    .order_online_step.payment{
+        margin: 0;
+    }
+    .order_online_step.payment::after{
+            display: none;
+    }
 }
+
 /* section　Access */
 .section--access .section__title{
     margin-bottom: 40px;

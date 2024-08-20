@@ -833,54 +833,56 @@ main
     .section__subTitle{
         font-size: 2.0rem;
     }
-}
-/* PC 769px 以上の画面サイズで適用されるスタイル */
+}/* PC 769px 以上の画面サイズで適用されるスタイル */
 
 /* section About */
-.section--about .section__title{
-    margin-bottom: 40px;
+.section--about{
+    .section__title{
+        margin-bottom: 40px;
+    };
+    .section__subTitle{
+        margin-bottom: 20px;
+    };
+    .btn{
+        margin-top: 40px;
+    };
+    .txt{
+        text-indent: 1.6rem;
+        text-align: left;
+        margin-bottom: 0.6rem;
+        max-width: 500px;
+    };
+    p{
+        margin-bottom: 6px;
+    };
+    br{
+        display: none;
+    };
 }
-.section--about .section__subTitle{
-    margin-bottom: 20px;
-}
-.section--about .btn{
-    margin-top: 40px;
-}
-.section--about .txt{
-    text-indent: 1.6rem;
-    text-align: left;
-    margin-bottom: 0.6rem;
-    max-width: 500px;
-}
-.section--about p{
-    margin-bottom: 6px;
-}
-.section--about br{
-    display: none;
-}
+
 /* section About PC*/
 @media screen and (min-width:769px){
-    .section--about .section__title{
-        margin-bottom: 80px;
+    .section--about{
+        .section__title{
+            margin-bottom: 80px;
+        };
+        .section__subTitle{
+            margin-bottom: 40px;
+        };
+        .btn{
+            margin-top: 80px;
+        };
+        .txt{
+            text-indent: 0;
+            text-align: center;
+            margin-bottom: 0.6rem;
+            max-width: 840px;
+        };
+        br{
+            display: flex;
+        }
     }
-    .section--about .section__subTitle{
-        margin-bottom: 40px;
-    }
-    .section--about .btn{
-        margin-top: 80px;
-    }
-    .section--about .txt{
-        text-indent: 0;
-        text-align: center;
-        margin-bottom: 0.6rem;
-        max-width: 840px;
-    }
-    .section--about br{
-        display: flex;
-    }
-
-}
-/* PC 769px 以上の画面サイズで適用されるスタイル */
+}/* PC 769px 以上の画面サイズで適用されるスタイル */
 
 /* section Flavor */
 .section--flavor{
@@ -888,201 +890,205 @@ main
     background-color: #DDF2C3;
     border-radius: 50% 50%;
     transform: translateX(-75vw); /* (width-100vw/2) */
-}
-.section--flavor .section__title{
-    margin-bottom: 40px;
-}
-.flavor_contents{
-    /* transform: translateX(75vw); */
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-}
-.flavor_tabs{
-    display: none;
-}
-.flavor_labels{
-    display: none;
-}
-.flavor_cards{
-    width: 100vw;
-    background-color: #DDF2C3;
-    overflow: hidden;
-}
-.card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 77.8vw;
-    max-width: 384px;
-    min-width: 295px;
-    /* height: 530px; */
-    padding: 20px 3.5vw;
+    .section__title{
+        margin-bottom: 40px;
+    };
 
-    border-radius: 15px;
-    background: #FFF;
-    box-shadow: 0px 3px 3px 0px rgba(53, 75, 78, 0.60);
-}
-.flavor_card.slick-slide{
-    width: 100vw !important;
-    align-items: center;
-    display: flex !important;
-    justify-content: center;
-    margin: 10px 0;
-}
-/* arrow-setting */
-.slider{
-    width: 100vw;
-    position: relative;
+    .flavor_contents{
+        /* transform: translateX(75vw); */
+        display: flex;
+        flex-direction: column;
+        margin: auto;
 
-    margin-top: 10px;
-}
-.slider .slick-arrow {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    font-size: 0;
-    position: absolute;
+        .flavor_tabs{
+            display: none;
+        };
+        .flavor_labels{
+            display: none;
+        };
+        .flavor_cards{
+            width: 100vw;
+            background-color: #DDF2C3;
+            overflow: hidden;
 
-    z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.slider .slick-arrow::before {
-    content: '';
-    display: block;
-    width: 12px;
-    height: 12px;
-    border: 1px solid #C6D1D2;
-    border-width: 3px 3px 0 0;
-    position: absolute;
-    top: 24px;
-    transform: rotate(45deg);
-}
-.slider .slick-next {
-    right: 10vw;
-}
-.slider .slick-prev {
-    left: 10vw;
-}
-.slider .slick-next::before {
-    left: 20px;
-}
-.slider .slick-prev::before {
-    border-width: 0 0 3px 3px;
-    right: 22px;
-}
-/* end arrow-setting */
-/* dots-setting */
-.slider .slick-dots {
-    text-align: center;
-}
-.slider .slick-dots li {
-    display: inline-block;
-}
-.slider .slick-dots button {
-    display: block;
-    width: 10px;
-    height: 10px;
-    margin: 6px;
-    font-size: 0;
-    padding: 0;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-    background: #C6D1D2;
-    border-radius: 50%;
-}
-.slider .slick-dots .slick-active button {
-    background: #F25318;
-}
-/* ------end of slick---- */
-.flavor_seasonal_tag.regular{
-    display: block;
-    width: 80px;
-    height: 20px;
+            .flavor_card.slick-slide.active{
+                width: 100vw !important;
+                align-items: center;
+                display: flex !important;
+                justify-content: center;
+                margin: 10px 0;
+            }
+            .flavor_card.slick-slide{
+                display: none;
+            }
 
-    font-family: "Noto Sans";
-    font-size: 1.3rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.065rem;
+            .card{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 77.8vw;
+                max-width: 384px;
+                min-width: 295px;
+                /* height: 530px; */
+                padding: 20px 3.5vw;
+            
+                border-radius: 15px;
+                background: #FFF;
+                box-shadow: 0px 3px 3px 0px rgba(53, 75, 78, 0.60);
+                .flavor_seasonal_tag.regular_tag{
+                    display: block;
+                    width: 80px;
+                    height: 20px;
+                
+                    font-family: "Noto Sans";
+                    font-size: 1.3rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: 0.065rem;
+                
+                    background-color: #DDF2C3;
+                    text-align: center;
+                    border-radius: 3px;
+                
+                    margin-bottom: 20px;
+                    opacity: 0;
+                }
+                .flavor_seasonal_tag.seasonal_tag{
+                    display: block;
+                    width: 80px;
+                    height: 20px;
+                
+                    font-family: "Noto Sans";
+                    font-size: 1.3rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: 0.065rem;
+                
+                    background-color: #DDF2C3;
+                    text-align: center;
+                    border-radius: 3px;
+                
+                    margin-bottom: 20px;
+                
+                }
+                .flavor_name{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-bottom: 30px;
+                }
+                .flavor_name_jp{
+                    font-size: 1.2rem;
+                    position: relative;
+                    top: -5px;
+                }
+                .flavor_img{
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    box-sizing: content-box;
+                    width: 188px;
+                    height: 220px;
+                    padding-left: 8px;
+                }
+                .flavor_ice{
+                    width: 188px;
+                    height: 158px;
+                }
+                .flavor_cup{
+                    width: 180px;
+                    height: 105px;
+                    position: absolute;
+                    top: 112px;
+                    left: 8px;
+                
+                }
+                .flavor_desc{
+                    
+                    padding: 30px 5px 10px;
+                    /* text-indent: 1.8rem; */
+                    font-size: 1.4rem;
+                    line-height: 1.8;
+                    height: 160px;
+                    text-align: center;
+                    span{
+                        display: inline-block;
+                    }
+                }
+            }
+        };
 
-    background-color: #DDF2C3;
-    text-align: center;
-    border-radius: 3px;
+        .slider{
+            width: 100vw;
+            position: relative;
+            margin: 10px auto 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-    margin-bottom: 20px;
-    opacity: 0;
-}
-.flavor_seasonal_tag.seasonal{
-    display: block;
-    width: 80px;
-    height: 20px;
+            .slick-arrow {
+                cursor: pointer;
+                border: none;
+                outline: none;
+                font-size: 0;
+                position: absolute;
+                z-index: 1;
+                top: 50%;
 
-    font-family: "Noto Sans";
-    font-size: 1.3rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.065rem;
+            }
+            .slick-arrow::before {
+                content: '';
+                display: block;
+                width: 12px;
+                height: 12px;
+                border: 1px solid #C6D1D2;
+                border-width: 3px 3px 0 0;
+                transform: rotate(45deg);
+            }
+            .slick-next {
+                right: 10vw;
+            }
+            .slick-prev {
+                left: 10vw;
+            }
+            .slick-prev::before {
+                border-width: 0 0 3px 3px;
+                right: 22px;
+            }
 
-    background-color: #DDF2C3;
-    text-align: center;
-    border-radius: 3px;
+            .slick-dots {
+                text-align: center;
+                li {
+                    display: inline-block;
+                }
+                button {
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    margin: 6px;
+                    font-size: 0;
+                    padding: 0;
+                    border: 0;
+                    outline: none;
+                    cursor: pointer;
+                    background: #C6D1D2;
+                    border-radius: 50%;
+                }
+                .slick-active button{
+                    background-color: #F25318;
+                }
+            }
 
-    margin-bottom: 20px;
+        }
+    };
+    .btn{
+        /* margin-top: 40px; */
+        margin: 40px auto 0px;
+    }
+}
 
-}
-.flavor_name{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.flavor_name_jp{
-    font-size: 1.2rem;
-    position: relative;
-    top: -5px;
-}
-.flavor_img{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    box-sizing: content-box;
-    width: 188px;
-    height: 220px;
-    padding-left: 8px;
-}
-.flavor_ice{
-    width: 188px;
-    height: 158px;
-}
-.flavor_cup{
-    width: 180px;
-    height: 105px;
-    position: absolute;
-    top: 112px;
-    left: 8px;
-
-}
-.flavor_desc{
-    display: flex;
-    text-align: center;
-    margin: 20px 10px 10px 10px;
-    /* text-indent: 1.8rem; */
-    font-size: 1.4rem;
-    line-height: 1.8;
-    height: 130px;
-    align-items: center;
-}
-.section--flavor .btn{
-    /* margin-top: 40px; */
-    margin: 40px auto 0px;
-}
 /* section Flavor PC */
 @media screen and (min-width:769px) {
     .section--flavor{
@@ -1091,23 +1097,181 @@ main
         border-radius: 0; 
         transform: none; 
         /* (width-100vw/2) */
+        .section__title{
+            margin-bottom: 90px;
+        };
+        .flavor_contents{
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            gap: 80px;
+            /* flex-wrap: wrap; */
+            justify-content: center;
+
+            .flavor_tabs{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+                margin: auto;
+                h3{
+                    font-family: "Playwrite AU VIC";
+                    font-size: 1.8rem;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                    letter-spacing: 0.09rem;
+                };
+                span{
+                    font-family: "Playwrite AU VIC";
+                    font-size: 1.2rem;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                    letter-spacing: 0.06rem;
+                };
+            };
+            .flavor_labels{
+                display: flex;
+                width: 420px;
+                flex-wrap: wrap;
+                row-gap: 20px;
+                column-gap: 20px;
+                margin: auto;
+                align-content: flex-start;
+
+                .flavor_label{
+                    width: 190px;
+                    height: 58px;
+                    background-color: #FFF;
+                    border-radius: 10rem 1rem 1rem 10rem;
+                    border:  1px solid rgba(198, 209, 210, 0.30);
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    margin: auto;
+            
+                    position: relative;
+                    .flavor_label_name::before{
+                        content: '';
+                        width: 46px;
+                        height: 46px;
+                        /* background-image: url(../images/flavor/circle/circle_chocolate.png); */
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        position: absolute;
+                        top: 50%;
+                        left: 0.5rem;
+                        transform: translateY(-50%);
+                    }
+                    .flavor_label_name{
+                        h3{
+                            padding-left: 60px;
+                            font-family: "Playwrite AU VIC";
+                            font-size: 1.8rem;
+                            font-style: normal;
+                            font-weight: 300;
+                            line-height: normal;
+                            letter-spacing: 0.09rem;
+                            text-align: center;
+                            span{
+                                font-family: "Noto Sans";
+                                font-size: 1.4rem;
+                                font-style: normal;
+                                font-weight: 300;
+                                line-height: 1.2; /* 16.8px */
+                                letter-spacing: 0.07rem;
+                            }
+                        }
+                    }
+                };
+                .flavor_label:hover{
+                    transform: translateY(4px);
+                    box-shadow: none;
+                }
+                .selected{
+                    transform: translateY(4px);
+                    box-shadow: none;
+                    /* background-color: pink; */
+                    border-color: #D9FAFF;
+                    transform-origin: center;
+                    transition: 0.3s;
+                }
+
+                .chocolate > .flavor_label_name::before{
+                    background-image: url(../images/flavor/circle/circle_chocolate.png);
+                }
+                .mikan > .flavor_label_name::before{
+                    background-image: url(../images/flavor/circle/circle_mikan.png);
+                }
+                .mocha > .flavor_label_name::before{
+                    background-image: url(../images/flavor/circle/circle_mocha.png);
+                }
+                .plum > .flavor_label_name::before{
+                    background-image: url(../images/flavor/circle/circle_plum.png);
+                }
+                .matcha > .flavor_label_name::before{
+                    background-image: url(../images/flavor/circle/circle_matcha.png);
+                }
+                .vanilla > .flavor_label_name::before{
+                    background-image: url(../images/flavor/circle/circle_vanilla.png);
+                }
+                .pistachio > .flavor_label_name::before{
+                    background-image: url(../images/flavor/circle/circle_pistachio.png);
+                }
+                .strawberry > .flavor_label_name::before{
+                    background-image: url(../images/flavor/circle/circle_strawberry.png);
+                }
+                .lemon > .flavor_label_name::before{
+                    background-image: url(../images/flavor/circle/circle_lemon.png);
+                }
+                .guava > .flavor_label_name::before{
+                    background-image: url(../images/flavor/circle/circle_guava.png);
+                }
+            };
+            .flavor_cards{
+                width: 28vw;
+                max-width: 400px;
+                background-color: #DDF2C3;
+                overflow: hidden;
+                .card{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 77.8vw;
+                    max-width: 384px;
+                    min-width: 295px;
+                    /* height: 530px; */
+                    padding: 20px 20px;
+                
+                    border-radius: 15px;
+                    background: #FFF;
+                    box-shadow: 0px 3px 3px 0px rgba(53, 75, 78, 0.60);
+                };
+                .flavor_card.slick-slide.active{
+                    width: 27vw !important;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 10px 20px;
+                }
+                /* .flavor_card.slick-slide{
+                    display: none;
+                } */
+            }
+            
+                
+            .slider{
+                display: none;
+            }
+        };
+        .btn{
+            /* margin-top: 40px; */
+            margin: 90px auto 0px;
+        };
     }
-    .section--flavor > .section__title{
-        margin-bottom: 90px;
-    }
-    .flavor_contents{
-        display: flex;
-        flex-direction: row;
-        margin: auto;
-        gap: 80px;
-    }
-    .flavor_tabs{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-        margin: auto;
-    }
+    
+    
+    
     #tab_all, 
     #tab_regular, 
     #tab_seasonal{
@@ -1137,144 +1301,14 @@ main
     #tab_seasonal.active:hover{
         transform: none;
     }
-    
-    .flavor_tabs h3{
-        font-family: "Playwrite AU VIC";
-        font-size: 1.8rem;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
-        letter-spacing: 0.09rem;
-    }
-    .flavor_tabs span{
-        font-family: "Playwrite AU VIC";
-        font-size: 1.2rem;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
-        letter-spacing: 0.06rem;
-    }
-    .flavor_labels{
-        display: flex;
-        width: 420px;
-        flex-wrap: wrap;
-        row-gap: 20px;
-        column-gap: 20px;
-        margin: auto;
-        align-content: flex-start;
-    }
-    .flavor_label{
-        width: 190px;
-        height: 58px;
-        background-color: #FFF;
-        border-radius: 10rem 1rem 1rem 10rem;
-        border:  1px solid rgba(198, 209, 210, 0.30);
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        margin: auto;
-
-        position: relative;
-    }
-    .flavor_label_name::before{
-        content: '';
-        width: 46px;
-        height: 46px;
-        /* background-image: url(../images/flavor/circle/circle_chocolate.png); */
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: absolute;
-        top: 50%;
-        left: 0.5rem;
-        transform: translateY(-50%);
-    }
-    .chocolate > .flavor_label_name::before{
-        background-image: url(../images/flavor/circle/circle_chocolate.png);
-    }
-    .mikan > .flavor_label_name::before{
-        background-image: url(../images/flavor/circle/circle_mikan.png);
-    }
-    .mocha > .flavor_label_name::before{
-        background-image: url(../images/flavor/circle/circle_mocha.png);
-    }
-    .plum > .flavor_label_name::before{
-        background-image: url(../images/flavor/circle/circle_plum.png);
-    }
-    .matcha > .flavor_label_name::before{
-        background-image: url(../images/flavor/circle/circle_matcha.png);
-    }
-    .vanilla > .flavor_label_name::before{
-        background-image: url(../images/flavor/circle/circle_vanilla.png);
-    }
-    .pistachio > .flavor_label_name::before{
-        background-image: url(../images/flavor/circle/circle_pistachio.png);
-    }
-    .strawberry > .flavor_label_name::before{
-        background-image: url(../images/flavor/circle/circle_strawberry.png);
-    }
-    .lemon > .flavor_label_name::before{
-        background-image: url(../images/flavor/circle/circle_lemon.png);
-    }
-    .guava > .flavor_label_name::before{
-        background-image: url(../images/flavor/circle/circle_guava.png);
-    }
-    .flavor_label_name > h3{
-        padding-left: 60px;
-        font-family: "Playwrite AU VIC";
-        font-size: 1.8rem;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
-        letter-spacing: 0.09rem;
-        text-align: center;
-    }
-    .flavor_label_name > h3 > span{
-        font-family: "Noto Sans";
-        font-size: 1.4rem;
-        font-style: normal;
-        font-weight: 300;
-        line-height: 1.2; /* 16.8px */
-        letter-spacing: 0.07rem;
-    }
-    .flavor_cards{
-        width: 28vw;
-        max-width: 400px;
-        background-color: #DDF2C3;
-        overflow: hidden;
-    }
-    .card{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 77.8vw;
-        max-width: 384px;
-        min-width: 300px;
-        /* height: 530px; */
-        padding: 20px 3.5vw;
-    
-        border-radius: 15px;
-        background: #FFF;
-        box-shadow: 0px 3px 3px 0px rgba(53, 75, 78, 0.60);
-    }
-    .flavor_card.slick-slide{
-        width: 27vw !important;
-        align-items: center;
-        display: flex !important;
-        justify-content: center;
-        margin: 10px 20px;
-    }
-    .slider{
-        display: none;
-    }
-    .section--flavor .btn{
-        /* margin-top: 40px; */
-        margin: 90px auto 0px;
-    }
-
 }/* PC 769px 以上の画面サイズで適用されるスタイル */
 
 /* section Menu */
-.section--menu > .section__title{
-    margin-bottom: 40px;
+.section--menu{
+    .section__title{
+        margin-bottom: 40px;
+    };
+
 }
 .card_title{
     margin-bottom: 20px;
@@ -1538,120 +1572,212 @@ main
         .section__title{
             margin-bottom: 80px;
         };
+
         .pickUp_desc{
             text-align: center;
             width: 100vw;
             margin-bottom: 70px;
         };
-    }
-    .pc_desc{
-        display: block;
-    }
-    .sf_desc{
-        display: none;
-    }
 
-    .order_online_steps{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        margin-bottom: 80px;
-    }
-    .order_online_step{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        padding-right: 4.5vw;
-        flex-shrink: 0;
-
-        h3{
-            text-align: center;
-            font-family: "Playwrite AU VIC";
-            font-size: 1.8rem;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            letter-spacing: 0.09rem;
-        };
-        h4{
-            text-align: center;
-            font-family: "Zen Kaku Gothic New";
-            font-size: 1.2rem;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 1.6; /* 19.2px */
-            letter-spacing: 0.06rem;
-            margin-top: 3px;
-            margin-bottom: 20px;
-        };
-        p{
-            text-align: center;
-            font-family: "Zen Kaku Gothic New";
-            font-size: 1.6rem;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 1.60; /* 25.6px */
-            letter-spacing: 0.08rem;
-        };
-        img{
-            text-align: center;
-            width: 12.5vw;
-            height: 12.5vw;
-            margin-top: 17px;
-            min-width: 100px;
-            min-height: 100px;
-        };
-    }
-    .order_online_step::after{
-        content: '';
-        display: flex;
-        width: 12px;
-        height: 12px;
-        border: 1px solid #05343B;
-        border-width: 3px 3px 0 0;
-        position: absolute;
-        top: 25px;
-        right: 2.25vw;
-        
-        transform: rotate(45deg);
-    }
-    .order_online_step.payment{
-        margin: 0;
-    }
-    .order_online_step.payment::after{
+        .pc_desc{
+            display: block;
+        }
+        .sf_desc{
             display: none;
+        }
+        
+        .order_online_steps{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-bottom: 80px;
+            .order_online_step{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                padding-right: 4.5vw;
+                flex-shrink: 0;
+
+                h3{
+                    text-align: center;
+                    font-family: "Playwrite AU VIC";
+                    font-size: 1.8rem;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                    letter-spacing: 0.09rem;
+                };
+                h4{
+                    text-align: center;
+                    font-family: "Zen Kaku Gothic New";
+                    font-size: 1.2rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 1.6; /* 19.2px */
+                    letter-spacing: 0.06rem;
+                    margin-top: 3px;
+                    margin-bottom: 20px;
+                };
+                p{
+                    text-align: center;
+                    font-family: "Zen Kaku Gothic New";
+                    font-size: 1.6rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 1.60; /* 25.6px */
+                    letter-spacing: 0.08rem;
+                };
+                img{
+                    text-align: center;
+                    width: 12.5vw;
+                    height: 12.5vw;
+                    margin-top: 17px;
+                    min-width: 100px;
+                    min-height: 100px;
+                };
+            };
+            .order_online_step::after{
+                content: '';
+                display: flex;
+                width: 12px;
+                height: 12px;
+                border: 1px solid #05343B;
+                border-width: 3px 3px 0 0;
+                position: absolute;
+                top: 25px;
+                right: 2.25vw;
+                
+                transform: rotate(45deg);
+            };
+            .order_online_step.payment{
+                margin: 0;
+            };
+            .order_online_step.payment::after{
+                    display: none;
+            };
+        }   
     }
 }
 
 /* section　Access */
-.section--access .section__title{
-    margin-bottom: 40px;
+.section--access{
+    .section__title{
+        margin-bottom: 40px;
+    };
+
+    .access_container{
+        .address_box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            .access_desc{
+                display: flex;
+                margin-bottom: 20px;
+                p {
+                    margin-left: 8px;
+                };
+            };
+            .address{
+                margin: 0 auto 20px;
+            
+                .info__title {
+                    font-family: "Noto Sans", sans-serif;
+                    font-size: 1.6rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    line-height: 1.6;
+                    letter-spacing: 0.08rem;
+                    };  
+                };
+            };
+
+        .btn{
+            margin: 30px auto 0;
+        };
+        
+        .online_shop_pc_banner{
+            display: none;
+        }
+    };
 }
-.access_desc{
-    display: flex;
-    margin-bottom: 20px;
-}
-.access_desc p{
-    margin-left: 8px;
-}
-.info__title {
-    font-family: "Noto Sans", sans-serif;
-    font-size: 1.6rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    line-height: 1.6;
-    letter-spacing: 0.08rem;
-}
-.address{
-    margin: 0 auto 20px;
-}
-.section--access .btn{
-    margin-top: 30px;
-}
+
+/* section Access and online-shop PC */
+@media screen and (min-width:769px) {
+    .section--access{
+        .section__title{
+            margin-bottom: 90px;
+        };
+
+        .access_container{
+            display: flex;
+            flex-direction: row;
+            gap: 120px;
+            margin: auto;
+            align-items: center;
+
+            .access_pc{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .address_box{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 80px;
+
+                    margin-bottom: 50px;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    .access_desc{
+                        display: flex;
+                        margin-bottom: 20px;
+                        flex-shrink: 0;
+                        p {
+                            margin-left: 8px;
+                        };
+                    };  
+                };
+                
+                
+                .btn{
+                margin-top: 50px;
+                };
+            };
+
+            .online_shop_pc_banner{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 80px 50px;
+                width: 370px;
+                height: 645px;
+                border-radius: 15px;
+                background-color: #DDF2C3;
+
+                flex-shrink: 0;
+                .section__title{
+                    margin-bottom: 0;
+                };
+                p {
+                    text-align: center;
+                    margin-top: 24px;
+                };
+                img {
+                    width: 208.375px;
+                    height: 255.5px;
+                    flex-shrink: 0;
+                    margin-top: 50px;
+                };
+            }
+        };
+    };
+}/* PC 769px 以上の画面サイズで適用されるスタイル */
 
 /* section　online-shop */
 .section--online_shop{
@@ -1661,19 +1787,24 @@ main
     transform: translateX(-20vw); /* (width-100vw/2) */
 
     margin-bottom: 55px;
-}
-.section--online_shop .section__title{
-    margin-bottom: 40px;
-}
-.online_shop_desc{
-    text-align: center;
-    width: 77vw;
-}
-.section--online_shop .mainOrder__btn{
-    margin: 20px 0;
-}
 
-
+    .section__title{
+        margin-bottom: 40px;
+    };
+    .mainOrder__btn{
+        margin: 20px 0;
+    };
+    .online_shop_desc{
+        text-align: center;
+        width: 77vw;
+    };
+}
+/* section Access and online-shop PC */
+@media screen and (min-width:769px) {
+    .section--online_shop{
+        display: none;
+    }
+}/* PC 769px 以上の画面サイズで適用されるスタイル */
 /*==========================
 footer
 ==========================*/
@@ -1685,48 +1816,98 @@ footer
     
     border-radius: 15px 15px 0 0;
     padding: 20px 0;
-}
-.footer__logo {
-    width: 166px;
-    height: 100px;
-    margin-top: 20px;
-}
-.footer__title{
-    margin-bottom: 6px;
-    font-size: 1.8rem;
-}
-.footer__info{
-    display: flex;
-    flex-direction: column;
-    margin-top: 43px;
 
-}
-.footer__info .info{
-    margin-bottom: 20px;
-}
-.footer__item{
-    font-family: "Noto Sans JP";
-    font-size: 1.6rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.2; /* 19.2px */
-    letter-spacing: 0.08rem;
-}
-.sns {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    margin: 14px 0 34px;
-}
-.copy{
-    font-family: "Noto Sans";
-    font-size: 1.6rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-.copy .shop_name{
-    font-family: "Playwrite AU VIC";
-    font-size: 1.6rem;
+    .footer__logo {
+        width: 166px;
+        height: 100px;
+        margin-top: 20px;
+    };
+    .footer__info{
+        display: flex;
+        flex-direction: column;
+        margin-top: 43px;
+        .info{
+            margin-bottom: 20px;
+        }
+        .footer__title{
+            margin-bottom: 6px;
+            font-family: "Noto Sans";
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        .footer__item{
+            font-family: "Noto Sans JP";
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.2; /* 19.2px */
+            letter-spacing: 0.08rem;
+        };
+    };
+    .sns {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        margin: 14px 0 34px;
+    };
+    .copy{
+        font-family: "Noto Sans";
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        .shop_name{
+            font-family: "Playwrite AU VIC";
+            font-size: 1.6rem;
+        };
+    }
 }
 
+@media screen and (min-width:769px) {
+    .footer{
+        .footer__logo{
+            margin-bottom: 35px;
+        }
+        .footer__info{
+            display: flex;
+            flex-direction: row;
+            width: 80vw;
+            margin: auto;
+            justify-content: space-evenly;
+            margin-bottom: 35px;
+
+            .info{
+                margin-bottom: 0;
+
+            };
+            .info__address{
+                width: 230px;
+            }
+
+            .info__contact{
+                width: 230px;
+            }
+
+        }
+        .sns{
+
+        }
+        .copy{
+
+        }
+    }
+}
+
+
+/*----------------------------
+scroll_up ｜下から上へ出現
+----------------------------*/
+.scroll {
+    transition: 0.8s ease-in-out;
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  .scroll.on {
+    transform: translateY(0);
+    opacity: 1.0;
+  }

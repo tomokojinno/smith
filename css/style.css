@@ -940,7 +940,7 @@ main
                     width: 80px;
                     height: 20px;
                 
-                    font-family: "Noto Sans";
+                    font-family: "Noto Sans",sans-serif;
                     font-size: 1.3rem;
                     font-style: normal;
                     font-weight: 400;
@@ -959,7 +959,7 @@ main
                     width: 80px;
                     height: 20px;
                 
-                    font-family: "Noto Sans";
+                    font-family: "Noto Sans",sans-serif;
                     font-size: 1.3rem;
                     font-style: normal;
                     font-weight: 400;
@@ -1174,7 +1174,7 @@ main
                             letter-spacing: 0.09rem;
                             text-align: center;
                             span{
-                                font-family: "Noto Sans";
+                                font-family: "Noto Sans",sans-serif;
                                 font-size: 1.4rem;
                                 font-style: normal;
                                 font-weight: 300;
@@ -1420,7 +1420,7 @@ main
     transform: translateY(-50%);
 }
 .step_tag{
-    font-family: "Noto Sans";
+    font-family: "Noto Sans",sans-serif;
     font-size: 1.3rem;
     font-style: normal;
     font-weight: 400;
@@ -1492,7 +1492,7 @@ main
     /* margin-bottom: 5px; */
 }
 .toGo_menu .menu_card{
-   padding-bottom: 0;
+    padding-bottom: 0;
 }
 .menu_card_ToGo{
     padding-bottom: 10px;
@@ -1831,12 +1831,12 @@ footer
         }
         .footer__title{
             margin-bottom: 6px;
-            font-family: "Noto Sans";
+            font-family: "Noto Sans",sans-serif;
             font-size: 1.8rem;
             font-weight: 700;
         }
         .footer__item{
-            font-family: "Noto Sans JP";
+            font-family: "Noto SansJP",sans-serif;
             font-size: 1.6rem;
             font-style: normal;
             font-weight: 400;
@@ -1905,7 +1905,7 @@ scroll_up ｜下から上へ出現
 .scroll {
     transition: 0.8s ease-in-out;
     transform: translateY(100px);
-    opacity: 0;
+    opacity: 0.3;
   }
   .scroll.on {
     transform: translateY(0);

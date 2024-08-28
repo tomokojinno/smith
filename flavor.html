@@ -43,7 +43,7 @@
     <div id="container" class="container">
       <header class="header">
         <p>
-          <a href="#"><img class="header__logo" src="./images/logo.svg" alt="smiths creameryのロゴ" /></a>
+          <a href="./index.html#"><img class="header__logo" src="./images/logo.svg" alt="smiths creameryのロゴ" /></a>
         </p>
         <img class="header__btn" src="./images/icon/menu.svg" alt="menuを開くボタン" />
 
@@ -51,15 +51,15 @@
           <img class="index__btn" src="./images/icon/menu_close.svg" alt="menuを閉じるボタン" />
           <nav class="index">
             <ul class="index__list">
-              <li class="index__item home"><a href="#">Home</a></li>
-              <li class="index__item"><a href="./about.html#">About</a></li>
-              <li class="index__item"><a href="#flavor">Flavor</a></li>
-              <li class="index__item"><a href="#menu">Menu</a></li>
-              <li class="index__item"><a href="#access">Access</a></li>
+              <li class="index__item home"><a href="./index.html">Home</a></li>
+              <li class="index__item"><a href="./about.html">About</a></li>
+              <li class="index__item"><a href="./flavor.html">Flavor</a></li>
+              <li class="index__item"><a href="./index.html#menu">Menu</a></li>
+              <li class="index__item"><a href="./index.html#access">Access</a></li>
             </ul>
             <ul class="indexOrder__list">
               <li class="indexOrder__item">
-                <a class="indexOrder__btn pickUp" href="#pickUpOrder">
+                <a class="indexOrder__btn pickUp" href="./pickUpOrder01_time.html">
                   <p class="main">Pick Up Today <span>!</span></p>
                   <p class="sub">オンライン事前予約</p>
                 </a>
@@ -74,122 +74,39 @@
           </nav>
           <ul class="indexSns__list">
             <li class="indexSns__item">
-              <a href="#" target="_blank"><img src="./images/icon/instagram.svg" alt="instagramへのリンク" /></a>
+              <a href="" target="_blank"><img src="./images/icon/instagram.svg" alt="instagramへのリンク" /></a>
             </li>
             <li class="indexSns__item">
-              <a href="#" target="_blank"><img src="./images/icon/x-outlined.svg" alt="xへのリンク" /></a>
+              <a href="" target="_blank"><img src="./images/icon/x-outlined.svg" alt="xへのリンク" /></a>
             </li>
           </ul>
         </div>
       </header>
 
       <main class="main">
-        <article class="article">
+        <article class="article flavor">
           <header class="article__header">
             <div class="mainVisual">
-              <h1 class="shopTitle"><img src="./images/main_visual/shop_title.svg" alt="Smith's Creamery Odawara since 2020" /></h1>
-              <h2 class="catchCopy"><img src="./images/main_visual/chach_copy.svg" alt="Small Batch Handcrafted Delights" /></h2>
-              <img class="keyVisual" src="./images/main_visual/key_img01.png" alt="アイスクリーム写真" />
-              <img class="keyVisual keyVisual_frame" src="./images/mainVisual_frame.png" alt="アイスクリームフレーム" />
+              <img src="./images/menu/togo_cup.svg" alt="カップイラスト" />
+              <h1 class="section__title">Flavor</h1>
             </div>
-            <ul class="mainOrder">
-              <li class="mainOrder__item">
-                <a class="mainOrder__btn pickUp" href="#pickUpOrder">
-                  <p class="main">Pick Up Today!</p>
-                  <p class="sub">オンライン事前決済</p>
-                </a>
-              </li>
-              <li class="mainOrder__item">
-                <a class="mainOrder__btn onlineShop" href="#onlineShop">
-                  <p class="main">Online Shop</p>
-                  <p class="sub">オンラインショップ</p>
-                </a>
-              </li>
-            </ul>
           </header>
-          <div class="scroll">
-            <section class="section section--about" id="about">
-              <h2 class="section__title">About</h2>
-              <h3 class="section__subTitle">Pure Taste, Pure Quality</h3>
-              <div class="txt">
-                <p>
-                  アイスクリームが大好きな店主Smithさんが、故郷アメリカのアイスクリームを日本で食べたくて<br />小田原に小さなアイスクリームショップを開きました。
-                </p>
-                <p>地元の小規模農家から厳選した新鮮な乳製品や季節のフルーツのみを使用し、<br />毎日手作りで丁寧に製造しています。</p>
-                <p>ここ小田原でしか味わえない美味しいスイーツをぜひ食べに来てください。</p>
-              </div>
-              <a class="btn" href="./about.html">詳しく見る</a>
-            </section>
-          </div>
-          <div class="scroll">
-            <section class="section section--flavor">
-              <h2 class="section__title">Flavor</h2>
-              <div class="flavor_contents">
-                <div class="flavor_tabs">
-                  <h3 id="tab_all" class="active">All<span>すべて</span></h3>
-                  <h3 id="tab_regular">Regular<span>レギュラー</span></h3>
-                  <h3 id="tab_seasonal">Seasonal<span>季節限定</span></h3>
-                </div>
-                <div class="flavor_labels">
-                  <button class="flavor_label chocolate regular selected">
-                    <div class="flavor_label_name">
-                      <h3>Chocolate<span>チョコレート</span></h3>
-                    </div>
-                  </button>
-                  <button class="flavor_label mocha regular">
-                    <div class="flavor_label_name">
-                      <h3>Mocha<span>モカ</span></h3>
-                    </div>
-                  </button>
-                  <button class="flavor_label matcha regular">
-                    <div class="flavor_label_name">
-                      <h3>Matcha<span>抹茶</span></h3>
-                    </div>
-                  </button>
-                  <button class="flavor_label vanilla regular">
-                    <div class="flavor_label_name">
-                      <h3>Vanilla<span>バニラ</span></h3>
-                    </div>
-                  </button>
-                  <button class="flavor_label pistachio regular">
-                    <div class="flavor_label_name">
-                      <h3>Pistachio<span>ピスタチオ</span></h3>
-                    </div>
-                  </button>
-                  <button class="flavor_label strawberry regular">
-                    <div class="flavor_label_name">
-                      <h3>Strawberry<span>ストロベリー</span></h3>
-                    </div>
-                  </button>
-                  <button class="flavor_label lemon seasonal">
-                    <div class="flavor_label_name">
-                      <h3>Lemon<span>レモン</span></h3>
-                    </div>
-                  </button>
-                  <button class="flavor_label guava seasonal">
-                    <div class="flavor_label_name">
-                      <h3>Guava<span>グアバ</span></h3>
-                    </div>
-                  </button>
-                  <button class="flavor_label mikan seasonal">
-                    <div class="flavor_label_name">
-                      <h3>Mikan<span>みかん</span></h3>
-                    </div>
-                  </button>
-                  <button class="flavor_label plum seasonal">
-                    <div class="flavor_label_name">
-                      <h3>Plum<span>梅</span></h3>
-                    </div>
-                  </button>
-                </div>
-                <div class="flavor_cards">
+
+          <section class="section">
+            <div class="flavor_tabs">
+              <h3 id="tab_all" class="active">All<span>すべて</span></h3>
+              <h3 id="tab_regular">Regular<span>レギュラー</span></h3>
+              <h3 id="tab_seasonal">Seasonal<span>季節限定</span></h3>
+            </div>
+            <div>
+              <div class="flavor_mini_cards">
+                <div class="flavor_mini_card">
                   <div class="flavor_card chocolate regular active">
                     <div class="card">
                       <p class="flavor_seasonal_tag regular_tag">Seasonal</p>
                       <h3 class="flavor_name section__subTitle">Chocolate<span class="flavor_name_jp">チョコレート</span></h3>
                       <div class="flavor_img">
                         <img class="flavor_ice" src="./images/flavor/row/chocolate.png" alt="チョコレートアイス" />
-                        <img class="flavor_cup" src="./images/cup.png" alt="ロゴ付きカップ" />
                       </div>
                       <p class="flavor_desc">
                         <span>厳選カカオ100％仕様</span><br />
@@ -208,7 +125,6 @@
                       <h3 class="flavor_name section__subTitle">Mocha<span class="flavor_name_jp">モカコーヒー</span></h3>
                       <div class="flavor_img">
                         <img class="flavor_ice" src="./images/flavor/row/mocha.png" alt="モカコーヒーアイス" />
-                        <img class="flavor_cup" src="./images/cup.png" alt="ロゴ付きカップ" />
                       </div>
                       <p class="flavor_desc">
                         <span>コーヒーとチョコレートの大人の味</span>
@@ -225,7 +141,6 @@
                       <h3 class="flavor_name section__subTitle">Matcha<span class="flavor_name_jp">抹茶</span></h3>
                       <div class="flavor_img">
                         <img class="flavor_ice" src="./images/flavor/row/matcha.png" alt="抹茶アイス" />
-                        <img class="flavor_cup" src="./images/cup.png" alt="ロゴ付きカップ" />
                       </div>
                       <p class="flavor_desc">
                         <span>風味豊かな抹茶を厳選</span>
@@ -241,7 +156,6 @@
                       <h3 class="flavor_name section__subTitle">Vanilla<span class="flavor_name_jp">バニラ</span></h3>
                       <div class="flavor_img">
                         <img class="flavor_ice" src="./images/flavor/row/vanilla.png" alt="バニラアイス" />
-                        <img class="flavor_cup" src="./images/cup.png" alt="ロゴ付きカップ" />
                       </div>
                       <p class="flavor_desc">
                         <span>高品質なバニラビーンズを使用</span>
@@ -258,7 +172,6 @@
                       <h3 class="flavor_name section__subTitle">Pistachio<span class="flavor_name_jp">ピスタチオ</span></h3>
                       <div class="flavor_img">
                         <img class="flavor_ice" src="./images/flavor/row/pistachio.png" alt="ピスタチオアイス" />
-                        <img class="flavor_cup" src="./images/cup.png" alt="ロゴ付きカップ" />
                       </div>
                       <p class="flavor_desc">
                         <span>濃厚なピスタチオの風味と</span>
@@ -276,7 +189,6 @@
                       <h3 class="flavor_name section__subTitle">Strawberry<span class="flavor_name_jp">ストロベリー</span></h3>
                       <div class="flavor_img">
                         <img class="flavor_ice" src="./images/flavor/row/strawberry.png" alt="ストロベリーアイス" />
-                        <img class="flavor_cup" src="./images/cup.png" alt="ロゴ付きカップ" />
                       </div>
                       <p class="flavor_desc">
                         <span>酸味と甘味の</span>
@@ -294,7 +206,6 @@
                       <h3 class="flavor_name section__subTitle">Lemon<span class="flavor_name_jp">レモン</span></h3>
                       <div class="flavor_img">
                         <img class="flavor_ice" src="./images/flavor/row/lemon.png" alt="レモンアイス" />
-                        <img class="flavor_cup" src="./images/cup.png" alt="ロゴ付きカップ" />
                       </div>
                       <p class="flavor_desc">
                         <span>小田原さんのレモンを</span>
@@ -311,7 +222,6 @@
                       <h3 class="flavor_name section__subTitle">Guava<span class="flavor_name_jp">グアバ</span></h3>
                       <div class="flavor_img">
                         <img class="flavor_ice" src="./images/flavor/row/guava.png" alt="グアバアイス" />
-                        <img class="flavor_cup" src="./images/cup.png" alt="ロゴ付きカップ" />
                       </div>
                       <p class="flavor_desc">
                         <span>果肉をたっぷりと使った</span>
@@ -327,7 +237,6 @@
                       <h3 class="flavor_name section__subTitle">Mikan<span class="flavor_name_jp">みかん</span></h3>
                       <div class="flavor_img">
                         <img class="flavor_ice" src="./images/flavor/row/mikan.png" alt="みかんアイス" />
-                        <img class="flavor_cup" src="./images/cup.png" alt="ロゴ付きカップ" />
                       </div>
                       <p class="flavor_desc">
                         <span>新鮮なみかんの</span>
@@ -347,7 +256,6 @@
                       <h3 class="flavor_name section__subTitle">Plum<span class="flavor_name_jp">梅</span></h3>
                       <div class="flavor_img">
                         <img class="flavor_ice" src="./images/flavor/row/plum.png" alt="うめアイス" />
-                        <img class="flavor_cup" src="./images/cup.png" alt="ロゴ付きカップ" />
                       </div>
                       <p class="flavor_desc">
                         <span>特産の小田原赤梅を</span>
@@ -362,212 +270,46 @@
                     </div>
                   </div>
                 </div>
-                <div class="slider"></div>
               </div>
-              <a class="btn" href="#about">すべてのflavorを見る</a>
-            </section>
-          </div>
-          <div class="scroll">
-            <section id="menu" class="section section--menu">
-              <h2 class="section__title">Menu</h2>
-              <div class="menus">
-                <div class="eatIn_menu">
-                  <h3 class="section__subTitle card_title">Eat in</h3>
-                  <div class="menu_card">
-                    <p class="menu_title section__subTitle">MENU</p>
-                    <div class="menu_content">
-                      <div class="columns">
-                        <div class="column cup">
-                          <p class="menu_en section__subTitle">Cup</p>
-                          <p class="menu_jp">カップ</p>
-                          <img src="./images/menu/cup_single.svg" alt="シングルカップ" />
-                        </div>
-                        <div class="column cone">
-                          <p class="menu_en section__subTitle">Cone</p>
-                          <p class="menu_jp">コーン</p>
-                          <img src="./images/menu/corn_single.svg" alt="シングルコーン" />
-                        </div>
-                        <div class="column cookie">
-                          <p class="menu_en section__subTitle">Cookie sand</p>
-                          <p class="menu_jp">クッキーサンド</p>
-                          <img src="./images/menu/cookie_sand.svg" alt="クッキーサンド" />
-                        </div>
-                      </div>
-                      <ul class="steps">
-                        <li class="step">
-                          <p class="step_tag">STEP1</p>
-                          <p class="step_desc">カップ/コーン/クッキーを選ぶ</p>
-                          <p class="step_tag step15">STEP1.5</p>
-                          <p class="step_desc">クッキーの種類を選ぶ</p>
-                        </li>
-                        <li class="step">
-                          <p class="step_tag">STEP2</p>
-                          <p class="step_desc">フレーバを選ぶ</p>
-                        </li>
-                        <li class="step">
-                          <p class="step_tag">STEP3</p>
-                          <p class="step_desc">お好みトッピングを選ぶ</p>
-                        </li>
-                        <li class="step">
-                          <p class="step_tag step_last">Enjoy!!</p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="toGo_menu">
-                  <h3 class="section__subTitle card_title">to Go</h3>
-                  <div class="menu_card">
-                    <p class="menu_title section__subTitle">MENU</p>
-                    <div class="menu_content">
-                      <div class="rows">
-                        <div class="menu_cup toGo_single">
-                          <img src="./images/menu/togo_cup.svg" alt="持ち帰りカップ" />
-                          <p class="cup_en section__subTitle">Single (150 ml)<span class="cup_jp">シングル</span></p>
-                        </div>
-                        <div class="menu_cup toGo_paint">
-                          <img src="./images/menu/togo_paint.svg" alt="持ち帰りパイント" />
-                          <p class="cup_en section__subTitle">Pints (473 ml)<span class="cup_jp">パイント</span></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <div class="scroll">
-            <section class="section section--order_online">
-              <div class="order_online_contents">
-                <h2 class="section__title">Order Online</h2>
-                <p class="pickUp_desc pc_desc">当日、事前予約が可能です<br />オンライン決済で、あとは店舗で受け取るだけなので待ち時間ゼロ！</p>
-                <div class="order_online_steps">
-                  <div class="order_online_step">
-                    <h3>Pick up Time</h3>
-                    <h4>受取時間</h4>
-                    <p>来店時間を選ぶ</p>
-                    <img src="./images/order_online_steps/pick-up-time.png" alt="受取時間の説明図" />
-                  </div>
-                  <div class="order_online_step">
-                    <h3>Menu</h3>
-                    <h4>メニュー</h4>
-                    <p>商品を選ぶ</p>
-                    <img src="./images/order_online_steps/menu.png" alt="メニュー選択の説明図" />
-                  </div>
-                  <div class="order_online_step">
-                    <h3>Flavor</h3>
-                    <h4>フレーバー</h4>
-                    <p>フレーバーを選ぶ</p>
-                    <img src="./images/order_online_steps/Flavor.png" alt="フレーバー選択の説明図" />
-                  </div>
-                  <div class="order_online_step">
-                    <h3>Topping</h3>
-                    <h4>トッピング</h4>
-                    <p>トッピングを選ぶ</p>
-                    <img src="./images/order_online_steps/topping.png" alt="トッピング選択の説明図" />
-                  </div>
-                  <div class="order_online_step payment">
-                    <h3>Payment</h3>
-                    <h4>お支払い</h4>
-                    <p>オンライン決済</p>
-                    <img src="./images/order_online_steps/payment.png" alt="支払い" />
-                  </div>
-                </div>
-                <a class="mainOrder__btn pickUp" href="#pickUpOrder">
-                  <p class="main">Pick Up Today!</p>
-                  <p class="sub">オンライン事前決済</p>
-                </a>
-                <p class="pickUp_desc sf_desc">当日、事前予約が可能です<br />オンライン決済で、あとは店舗で受け取るだけなので待ち時間ゼロ！</p>
-              </div>
-            </section>
-          </div>
-
-          <div class="scroll">
-            <section id="access" class="section section--access">
-              <h2 class="section__title">Access</h2>
-              <div class="access_container">
-                <div class="access_pc">
-                  <div class="address_box">
-                    <div class="access_desc">
-                      <img src="./images/icon/directions_walk.svg" alt="徒歩アイコン" />
-                      <p>小田原駅東口から徒歩5分</p>
-                    </div>
-                    <div class="address">
-                      <h3 class="info__title">Address</h3>
-                      <p class="info__item">
-                        〒250−0011<br />
-                        神奈川県小田原市栄町XX <br />
-                      </p>
-                      <p class="info__item">電話：＋81-xxxxx -xxxx</p>
-                    </div>
-                  </div>
-                  <img src="./images/map.svg" alt="店舗と小田原駅周辺のマップ" />
-                  <a class="btn" href="" target="_blank">Google Mapで見る</a>
-                </div>
-                <div class="online_shop_pc_banner">
-                  <h3 class="section__title">Online Shop</h3>
-                  <p>Smith's creameryのこだわりを ぜひご自宅でもお楽しみください 全国配送可能！</p>
-                  <p>季節限定アイスも購入できます ギフトラッピングも承ります</p>
-                  <img src="./images/onlineshop_logo.png" alt="オンラインショップ" />
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <div class="scroll">
-            <section class="section section--online_shop">
-              <h2 class="section__title">Online Shop</h2>
-              <p class="online_shop_desc">
-                Smith's creameryのこだわりを<br />
-                ぜひご自宅でもお楽しみください<br />
-                全国配送可能！
-              </p>
-              <a class="mainOrder__btn onlineShop" href="#onlineShop">
-                <p class="main">Online Shop</p>
-                <p class="sub">オンラインショップ</p>
-              </a>
-              <p class="online_shop_desc">季節限定アイスも購入できます<br />ギフトラッピングも承ります</p>
-            </section>
-          </div>
+            </div>
+          </section>
         </article>
       </main>
-      <div class="scroll">
-        <footer class="footer">
-          <img class="footer__logo" src="./images/logo.svg" alt="" />
-          <div class="footer__info">
-            <div class="info__address info">
-              <h2 class="footer__title info__title">Address</h2>
-              <p class="footer__item">
-                〒250-0011 <br />
-                神奈川県小田原市栄町XX
-              </p>
-            </div>
-            <div class="info__hour info">
-              <h2 class="footer__title info__title">Hour</h2>
-              <p class="footer__item">
-                OPEN<br />
-                10:00 - 18:00<br />
-                CLOSE<br />
-                月曜日 / 水曜日
-              </p>
-            </div>
-            <div class="info__contact info">
-              <h2 class="footer__title info__title">Contact</h2>
-              <p class="footer__item">smiths_creamery@mail.com</p>
-            </div>
+
+      <footer class="footer">
+        <img class="footer__logo" src="./images/logo.svg" alt="" />
+        <div class="footer__info">
+          <div class="info__address info">
+            <h2 class="footer__title info__title">Address</h2>
+            <p class="footer__item">
+              〒250-0011 <br />
+              神奈川県小田原市栄町XX
+            </p>
           </div>
-          <ul class="sns">
-            <li class="sns__item">
-              <a href="#" target="_blank"><img src="./images/icon/instagram.svg" alt="" /></a>
-            </li>
-            <li class="sns__item">
-              <a href="#" target="_blank"><img src="./images/icon/x-outlined.svg" alt="" /></a>
-            </li>
-          </ul>
-          <p class="copy">&copy; 2024 <span class="shop_name">smith's creamery</span></p>
-        </footer>
-      </div>
+          <div class="info__hour info">
+            <h2 class="footer__title info__title">Hour</h2>
+            <dl class="footer__item">
+              <dt>OPEN</dt>
+              <dd>10:00 - 18:00</dd>
+              <dt>CLOSE</dt>
+              <dd>月曜日 / 水曜日</dd>
+            </dl>
+          </div>
+          <div class="info__contact info">
+            <h2 class="footer__title info__title">Contact</h2>
+            <p class="footer__item">smiths_creamery@mail.com</p>
+          </div>
+        </div>
+        <ul class="sns_sp">
+          <li class="sns__item">
+            <a href="#" target="_blank"><img src="./images/icon/instagram.svg" alt="" /></a>
+          </li>
+          <li class="sns__item">
+            <a href="#" target="_blank"><img src="./images/icon/x-outlined.svg" alt="" /></a>
+          </li>
+        </ul>
+        <p class="copy">&copy; 2024 <span class="shop_name">smith's creamery</span></p>
+      </footer>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>

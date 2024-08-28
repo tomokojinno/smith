@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smith's Creamery</title>
+    <meta name="description" content="小田原の手作りアイスクリーム工房『Smith's Creamery』" />
+
+    <!-- Favicon Apple-touch-icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icon_png/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon_png/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icon_png/icon_16.png" />
+
+    <!-- OGP Open Graph Protocol -->
+    <meta property="og:description" content="小田原の手作りアイスクリーム工房『Smith's Creamery』" />
+    <meta property="og:title" content="Smith's Creamery" />
+    <!-- <meta property="og:image" content="SNSでシェアされたときに表示する画像※かならず絶対パスを記載（相対パス不可）https://....../img/icons/logo.png"> -->
+    <!-- <meta property="og:image:width" content="画像の幅px"> -->
+    <!-- <meta property="og:image:height" content="画像の高さpx"> -->
+    <!-- <meta property="og:type" content="urlがトップページの場合→website、トップページ以外の場合→article"> -->
+    <!-- <meta property="og:url" content="https://........"> -->
+
+    <!-- Web Font -->
+    <!--  web font だと詳細設定ができないのでもしかしたら変更するかも-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+VIC:wght@100..400&family=Zen+Kaku+Gothic+New&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/destyle.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- plugin -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <!-- テキストを画像で使う時はp or hで囲む -->
+    <!-- figure文章とセットの時　divでもいい -->
+  </head>
+  <body>
+    <div id="container" class="container">
+      <header class="header">
+        <p>
+          <a href="./index.html#"><img class="header__logo" src="./images/logo.svg" alt="smiths creameryのロゴ" /></a>
+        </p>
+      </header>
+
+      <main class="main">
+        <article class="article payment payment_card_input">
+          <header class="article__header payment__header">
+            <div class="mainVisual">
+              <h1 class="section__title">
+                Payment
+                <span class="section__title_jp">お支払い</span>
+              </h1>
+            </div>
+          </header>
+          <section class="section">
+            <div class="order_bars payment_bar">
+              <div class="order_step_dot">
+                <h2 class="dot_title">情報入力</h2>
+                <img src="./images/order_step_dots/dot_check.svg" alt="" />
+              </div>
+              <div class="order_step_dot">
+                <h2 class="dot_title">支払い</h2>
+                <img src="./images/order_step_dots/dot_check_green.svg" alt="" />
+              </div>
+              <div class="order_step_dot">
+                <h2 class="dot_title">完了</h2>
+                <img src="./images/order_step_dots/dot_check_before.svg" alt="" />
+              </div>
+            </div>
+            <div>
+              <p class="order_txt">お支払い情報を入力ください</p>
+              <div class="inputs">
+                <div class="input">
+                  <p class="input_font">Payment Method</p>
+                  <input type="text" name="card_kinds" placeholder="" class="input_box" />
+                </div>
+                <div class="input">
+                  <p class="input_font">Cardholder Name</p>
+                  <input type="text" name="card_name" placeholder="" class="input_box" />
+                </div>
+                <div class="input">
+                  <p class="input_font">Cardnumber</p>
+                  <input type="text" name="card_number" placeholder="" class="input_box" />
+                </div>
+                <div class="input_row">
+                  <div class="input">
+                    <p class="input_font">Expiry</p>
+                    <input type="number" name="expiry_date" placeholder="" class="input_box" />
+                  </div>
+                  <div class="input">
+                    <p class="input_font">CVV</p>
+                    <input type="number" name="cvv" placeholder="" class="input_box" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section total_payment">
+            <h2 class="title">支払金額合計</h2>
+            <h2 class="price">¥1,450</h2>
+          </section>
+          <section class="section next_btn">
+            <a class="btn" href="./pickUpOrder08_final.html">次へ</a>
+          </section>
+        </article>
+      </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

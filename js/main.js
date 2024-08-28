@@ -104,8 +104,8 @@
             }
 
             $('.flavor_cards').slick('slickGoTo', i_clicked, false);
-            console.log(i_clicked);
-            console.log($('#tab_seasonal').hasClass('active'));
+            // console.log(i_clicked);
+            // console.log($('#tab_seasonal').hasClass('active'));
         });
 
         $('.flavor_cards').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
@@ -126,19 +126,55 @@
     });
 
     //scroll_effect
-    $(window).scroll(function () {
-        var scrollAnimationElm = document.querySelectorAll('.scroll');
-        var scrollAnimationFunc = function () {
-        for (var i = 0; i < scrollAnimationElm.length; i++) {
-            var triggerMargin = 300;
-            if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
-            scrollAnimationElm[i].classList.add('on');
+    // $(window).scroll(function () {
+    //     var scrollAnimationElm = document.querySelectorAll('.scroll');
+    //     var scrollAnimationFunc = function () {
+    //     for (var i = 0; i < scrollAnimationElm.length; i++) {
+    //         var triggerMargin = 50;
+    //         if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+    //         scrollAnimationElm[i].classList.add('on');
+    //         }
+    //     }
+    //     }
+    //     window.addEventListener('load', scrollAnimationFunc);
+    //     window.addEventListener('scroll', scrollAnimationFunc);
+    // });
+
+    let winHeight,winScroll,scrollPos;
+    // $(window).on('load scroll',function(){
+    $(window).on('scroll',function(){
+        winScroll = $(window).scrollTop();
+        winHeight = $(window).height();
+	    scrollPos = winHeight * 1.1 + winScroll;
+        // console.log(scrollPos);
+        // $(".slidein").each(function(){
+        $(".scroll").each(function(){
+            if($(this).offset().top <= scrollPos){
+                $(this).addClass("on");
+            }else{
+                $(this).removeClass("on");
             }
-        }
-        }
-        window.addEventListener('load', scrollAnimationFunc);
-        window.addEventListener('scroll', scrollAnimationFunc);
+            console.log(scrollPos, $(this).offset().top);
+        });
     });
+
+    // 日付取得して表示
+    document.getElementById("view_time").innerHTML = getNow();
+
+    function getNow() {
+        var now = new Date();
+        var year = now.getFullYear();
+        var mon = now.getMonth()+1; //１を足すこと
+        var day = now.getDate();
+        // var hour = now.getHours();
+        // var min = now.getMinutes();
+        // var sec = now.getSeconds();
+
+        //出力用
+        // var s = year + "年" + mon + "月" + day + "日" + hour + "時" + min + "分" + sec + "秒"; 
+        var s = year + "." + mon + "." + day; 
+        return s;
+}
 
 
 }

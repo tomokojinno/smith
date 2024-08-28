@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smith's Creamery</title>
+    <meta name="description" content="小田原の手作りアイスクリーム工房『Smith's Creamery』" />
+
+    <!-- Favicon Apple-touch-icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icon_png/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon_png/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icon_png/icon_16.png" />
+
+    <!-- OGP Open Graph Protocol -->
+    <meta property="og:description" content="小田原の手作りアイスクリーム工房『Smith's Creamery』" />
+    <meta property="og:title" content="Smith's Creamery" />
+    <!-- <meta property="og:image" content="SNSでシェアされたときに表示する画像※かならず絶対パスを記載（相対パス不可）https://....../img/icons/logo.png"> -->
+    <!-- <meta property="og:image:width" content="画像の幅px"> -->
+    <!-- <meta property="og:image:height" content="画像の高さpx"> -->
+    <!-- <meta property="og:type" content="urlがトップページの場合→website、トップページ以外の場合→article"> -->
+    <!-- <meta property="og:url" content="https://........"> -->
+
+    <!-- Web Font -->
+    <!--  web font だと詳細設定ができないのでもしかしたら変更するかも-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+VIC:wght@100..400&family=Zen+Kaku+Gothic+New&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/destyle.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- plugin -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <!-- テキストを画像で使う時はp or hで囲む -->
+    <!-- figure文章とセットの時　divでもいい -->
+  </head>
+  <body>
+    <div id="container" class="container">
+      <header class="header">
+        <p>
+          <a href="./index.html#"><img class="header__logo" src="./images/logo.svg" alt="smiths creameryのロゴ" /></a>
+        </p>
+        <img class="header__btn" src="./images/icon/menu.svg" alt="menuを開くボタン" />
+
+        <div class="header__navMenu">
+          <img class="index__btn" src="./images/icon/menu_close.svg" alt="menuを閉じるボタン" />
+          <nav class="index">
+            <ul class="index__list">
+              <li class="index__item home"><a href="./index.html">Home</a></li>
+              <li class="index__item"><a href="./about.html">About</a></li>
+              <li class="index__item"><a href="./flavor.html">Flavor</a></li>
+              <li class="index__item"><a href="./index.html#menu">Menu</a></li>
+              <li class="index__item"><a href="./index.html#access">Access</a></li>
+            </ul>
+            <ul class="indexOrder__list">
+              <li class="indexOrder__item">
+                <a class="indexOrder__btn pickUp" href="#pickUpOrder">
+                  <p class="main">Pick Up Today <span>!</span></p>
+                  <p class="sub">オンライン事前予約</p>
+                </a>
+              </li>
+              <li class="indexOrder__item">
+                <a class="indexOrder__btn onlineShop" href="#onlineShop">
+                  <p class="main">Online Shop</p>
+                  <p class="sub">オンラインショップ</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="indexSns__list">
+            <li class="indexSns__item">
+              <a href="" target="_blank"><img src="./images/icon/instagram.svg" alt="instagramへのリンク" /></a>
+            </li>
+            <li class="indexSns__item">
+              <a href="" target="_blank"><img src="./images/icon/x-outlined.svg" alt="xへのリンク" /></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="main">
+        <article class="article pick_up_order">
+          <header class="article__header">
+            <div class="mainVisual">
+              <img src="./images/menu/cup_single.svg" alt="カップイラスト" />
+              <h1 class="section__title title">Pick Up</h1>
+              <h1 class="section__title order_time">
+                Today
+                <span id="view_time"></span>
+              </h1>
+            </div>
+          </header>
+
+          <section class="section">
+            <div class="order_desc">
+              <p>こちらから、当日事前オーダーが可能！</p>
+              <p>
+                ゆっくり選べて、来店時スムーズに<br />
+                ご御案内いたします
+              </p>
+              <p>是非、ご利用ください</p>
+            </div>
+            <div class="order_bars"></div>
+            <div>
+              <h2 class="order_title">Pick Up Time<span class="order_title_jp">受取時間</span></h2>
+              <p class="order_txt">来店時間を選んでください</p>
+              <div>
+                <!-- ここに展開する選択型ボタン -->
+              </div>
+            </div>
+          </section>
+        </article>
+        <a class="btn" href="./pickUpOrder02_menu.html">次へ</a>
+      </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

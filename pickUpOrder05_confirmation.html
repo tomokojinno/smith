@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smith's Creamery</title>
+    <meta name="description" content="小田原の手作りアイスクリーム工房『Smith's Creamery』" />
+
+    <!-- Favicon Apple-touch-icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icon_png/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon_png/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icon_png/icon_16.png" />
+
+    <!-- OGP Open Graph Protocol -->
+    <meta property="og:description" content="小田原の手作りアイスクリーム工房『Smith's Creamery』" />
+    <meta property="og:title" content="Smith's Creamery" />
+    <!-- <meta property="og:image" content="SNSでシェアされたときに表示する画像※かならず絶対パスを記載（相対パス不可）https://....../img/icons/logo.png"> -->
+    <!-- <meta property="og:image:width" content="画像の幅px"> -->
+    <!-- <meta property="og:image:height" content="画像の高さpx"> -->
+    <!-- <meta property="og:type" content="urlがトップページの場合→website、トップページ以外の場合→article"> -->
+    <!-- <meta property="og:url" content="https://........"> -->
+
+    <!-- Web Font -->
+    <!--  web font だと詳細設定ができないのでもしかしたら変更するかも-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+VIC:wght@100..400&family=Zen+Kaku+Gothic+New&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/destyle.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- plugin -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <!-- テキストを画像で使う時はp or hで囲む -->
+    <!-- figure文章とセットの時　divでもいい -->
+  </head>
+  <body>
+    <div id="container" class="container">
+      <header class="header">
+        <p>
+          <a href="./index.html#"><img class="header__logo" src="./images/logo.svg" alt="smiths creameryのロゴ" /></a>
+        </p>
+        <p class="section__subTitle">Pick up Today</p>
+      </header>
+
+      <main class="main">
+        <article class="article">
+          <header class="article__header order_header">
+            <div class="mainVisual">
+              <h1 class="section__title order_time">Confirmation</h1>
+            </div>
+          </header>
+
+          <section class="section">
+            <div>
+              <p class="order_txt">注文内容を確認ください</p>
+              <div class="conf_detail">
+                <div class="conf">
+                  <h2 class="conf_title">Day<span class="conf_title_jp">日付</span></h2>
+                  <p class="conf_data" id="view_time"></p>
+                </div>
+                <div class="conf">
+                  <h2 class="conf_title">Time<span class="conf_title_jp">時間</span></h2>
+                  <p class="conf_data">15:00</p>
+                </div>
+                <div class="conf">
+                  <h2 class="conf_title">Total Payment<span class="conf_title_jp">合計</span></h2>
+                  <p class="conf_data">¥1,450</p>
+                </div>
+                <div class="conf">
+                  <h2 class="conf_title">Order Detail<span class="conf_title_jp">オーダー内容</span></h2>
+                  <!-- <p class="conf_data"></p> -->
+                  <div class="order_cards">
+                    <div class="order_card">
+                      <div class="order_name">
+                        <div class="order_name_col">
+                          <img src="./images/menu/cup_single.svg" alt="シングルカップ" />
+                        </div>
+                        <div class="order_name_col">
+                          <h3>Cup<span>カップ</span></h3>
+                          <h3>Single</h3>
+                        </div>
+                        <div class="order_name_col">
+                          <button>Cancel</button>
+                          <p>¥550</p>
+                        </div>
+                      </div>
+                      <div class="order_flavor">
+                        <h3 class="conf_title">Flavor</h3>
+                        <div class="order_flavor_tag">
+                          <img src="./images/flavor/circle/circle_chocolate.png" alt="チョコフレーバ" />
+                          <h2 class="order_name_title">Chocolate<span class="order_name_title_jp">チョコレート</span></h2>
+                          <button><img src="" alt="変更マーク" /></button>
+                        </div>
+                      </div>
+                      <div>
+                        <h3 class="conf_title">Topping</h3>
+                        <div>
+                          <h2 class="order_name_title">
+                            Chocolate Souce
+                            <span class="order_name_title_jp">チョコレートソース</span>
+                          </h2>
+                          <p>¥50</p>
+                          <button><img src="" alt="キャンセルマーク" /></button>
+                        </div>
+                        <p>add Topping<span>追加</span></p>
+                        <div>
+                          <h2>sub total<span>小計</span></h2>
+                          <p>¥600</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="order_cards">
+                    <div class="order_card">
+                      <div class="order_name">
+                        <div class="order_name_col">
+                          <img src="./images/menu/cup_single.svg" alt="シングルカップ" />
+                        </div>
+                        <div class="order_name_col">
+                          <h3>Cup<span>カップ</span></h3>
+                          <h3>Single</h3>
+                        </div>
+                        <div class="order_name_col">
+                          <button>Cancel</button>
+                          <p>¥550</p>
+                        </div>
+                      </div>
+                      <div class="order_flavor">
+                        <h3 class="conf_title">Flavor</h3>
+                        <div class="order_flavor_tag">
+                          <img src="./images/flavor/circle/circle_chocolate.png" alt="チョコフレーバ" />
+                          <h2 class="order_name_title">Chocolate<span class="order_name_title_jp">チョコレート</span></h2>
+                          <button><img src="" alt="変更マーク" /></button>
+                        </div>
+                      </div>
+                      <div>
+                        <h3 class="conf_title">Topping</h3>
+                        <div>
+                          <h2 class="order_name_title">
+                            Chocolate Souce
+                            <span class="order_name_title_jp">チョコレートソース</span>
+                          </h2>
+                          <p>¥50</p>
+                          <button><img src="" alt="キャンセルマーク" /></button>
+                        </div>
+                        <p>add Topping<span>追加</span></p>
+                        <div>
+                          <h2>sub total<span>小計</span></h2>
+                          <p>¥600</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <a class="btn" href="./pickUpOrder02_menu.html">追加オーダー</a>
+        <a class="btn" href="./pickUpOrder06_payment.html">お支払いへ</a>
+      </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

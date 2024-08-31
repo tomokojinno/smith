@@ -1825,7 +1825,7 @@ footer
     align-items: center;
     
     border-radius: 15px 15px 0 0;
-    padding: 20px 0;
+    padding: 20px 0 80px;
 
     .footer__logo {
         width: 166px;
@@ -1937,13 +1937,13 @@ scroll_up ｜下から上へ出現
 ----------------------------*/
 .scroll {
     transition: 1.2s ease-in-out;
-    transform: translateY(300px);
-    opacity: 0.2;
-  }
-  .scroll.on {
+    transform: translateY(80px);
+    opacity: 0.0;
+}
+.scroll.on {
     transform: translateY(0);
     opacity: 1.0;
-  }
+}
 
 
 
@@ -1953,6 +1953,7 @@ about
 .about{
     .article__header{
         width: 250vw;
+        height: ;
         background-color: #DDF2C3;
         border-radius: 0 0 50% 50%;
         translate: -75vw;
@@ -2182,15 +2183,13 @@ about
     }
 }
 
-
-
-
 /*==========================
 flavor
 ==========================*/
 .flavor{
     .article__header{
         width: 250vw;
+        height: 90vw;
         background-color: #DDF2C3;
         border-radius: 0 0 50% 50%;
         translate: -75vw;
@@ -2216,6 +2215,165 @@ flavor
         }
     }
 
+    .section{
+        padding-top: 40px;
+    }
+
+    .flavor_tabs{
+        display: flex;
+        gap: 20px;
+        h3{
+            font-family: "Playwrite AU VIC";
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            letter-spacing: 0.9px;
+
+            text-align: center;
+            width: 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            span{
+                font-size: 1.2rem;
+            }
+        }
+        #tab_all, 
+        #tab_regular, 
+        #tab_seasonal{
+            position: relative;
+        }
+        #tab_all.active::before,
+        #tab_regular.active::before,
+        #tab_seasonal.active::before
+        {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 21.5px;
+            width: 100%;
+            height: 1px;
+            transform: translateX(-50%);
+            background-color: #05343B;
+
+        }
+        #tab_all:hover, 
+        #tab_regular:hover, 
+        #tab_seasonal:hover{
+            transform: scale(1.1, 1.1);
+        }
+        #tab_all.active:hover,
+        #tab_regular.active:hover,
+        #tab_seasonal.active:hover{
+            transform: none;
+        }
+            
+
+    }
+
+    .flavor_mini_cards{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 35px;
+        gap: 30px;
+        justify-content: center;
+
+        .flavor_mini_card{
+            width: 314px;
+            height: 285px;
+            background-color: #FFF;
+            border-radius: 15px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            outline: 1px solid rgba(198, 209, 210, 0.60);
+            .upper{
+                display: flex;
+                height: 151px;
+                
+                .left_side{
+                    width: 140px;
+                    .flavor_name{
+                        background-color: #DDF2C3;
+                        width: 140px;
+                        height: 50px;
+                        display: flex;
+                        flex-direction: column;
+                        border-radius: 15px 0 15px 0;
+                        span{
+                            font-family: "Zen Kaku Gothic New";
+                            font-size: 1.2rem;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 1.5; /* 19.2px */
+                            letter-spacing: 0.6px;
+                            translate: 0 -5px;
+                        }
+
+                    }
+                    .flavor_seasonal_tag{
+                        display: block;
+                        width: 80px;
+                        height: 20px;
+                        font-family: "Noto Sans",sans-serif;
+                        font-size: 1.3rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 0.065rem;
+                    
+                        background-color: #DDF2C3;
+                        text-align: center;
+                        border-radius: 3px;
+                        margin: 19px 30px 14px;
+                    }
+                    .flavor_seasonal_tag.regular_tag{
+                        opacity: 0;
+                    }
+                    dl{
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 100%;
+                        padding-left: 13px;
+                        padding-right: 5px;
+
+                        text-align: center;
+                        font-family: "Noto SansJP";
+                        font-size: 1rem;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: normal;
+                        letter-spacing: 0.5px;
+                        dt{
+                            width: 85%;
+                            font-weight: 400;
+                            text-align: center;
+                        }
+                        dd{
+                            width: 15%;
+
+                        }
+                    }
+                }
+                .right_side{
+                    margin: 18px auto 0;
+                    border-radius: 15px 15px 0px 0px;
+                    img{
+                        width: 144px;
+                        height: 122px; 
+                    }
+                }
+            }
+
+            .lower{
+                width: 314px;
+                height: 134px;
+                background-color: #D9FAFF;
+                padding: 9px 14px;
+                border-radius: 0px 0px 15px 15px;
+            }
+        }
+    }
+
 }
 
 /*==========================
@@ -2224,9 +2382,33 @@ pick up order
 /*----------------------------
 Time
 ----------------------------*/
-.pick_up_order{
+.order_title{
+    font-family: "Noto Sans";
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 30px */
+    letter-spacing: 1.25px;
+}
+.order_title_jp{
+    font-family: "Noto Sans";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 24px */
+    letter-spacing: 1px;
+}
+.order_txt{
+    font-family: "Noto Sans";
+font-size: 2rem;
+font-style: normal;
+font-weight: 500;
+line-height: 120%; /* 24px */
+letter-spacing: 1px;
+}
+.pick_up_order_time{
+    align-items: center;
     .article__header{
-
         width: 160vw;
         background-color: #DDF2C3;
         border-radius: 0 0 50% 50%;
@@ -2266,6 +2448,173 @@ Time
             }
         }
     }
+    .section{
+        padding-top: 58px;
+        padding-bottom: 0;
+    }
+    .next_btn{
+        padding-top: 15px;
+        padding-bottom: 80px;
+        .btn{
+            background-color: #DDF2C3;
+        }
+    }
+
+    .order_desc{
+        text-align: center;
+        margin-bottom: 58px;
+    }
+
+    .order_bars{
+        padding-top: 0px;
+        padding-bottom: 32px;
+        display: flex;
+        gap: 15vw;
+        position: relative;
+
+        .order_step_dot{
+            width: 38px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .dot_title{
+                font-family: "Noto SansJP";
+                font-size: 1.4rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                padding-top: 0px;
+                padding-bottom: 13px;
+            }
+        }
+    }
+
+    .order_bars::after{
+        content: '';
+        background-color: #05343B;
+        width: calc(15vw * 3 + 100px); 
+        height: 2px;
+
+        position: absolute;
+        left: 50%;
+        translate: -50% 0 ;
+        top: calc(0px + 69px - 23px);
+        z-index: -10;
+    }
+
+    .order_title{
+        width: 300px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .order_txt{
+        margin-top: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .time_list{
+        display: flex;
+        justify-content: center;
+        .time_group{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-bottom: 15px;
+
+            .title{
+                position: relative;
+                cursor: pointer;
+                font-size:1rem;
+                font-weight: normal;
+                padding: 3% 3% 3% 50px;
+                transition: all .5s ease;
+                font-family: "Noto Sans";
+                font-size: 2.5rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 120%; /* 30px */
+                letter-spacing: 1.25px;
+
+                display: flex;
+                width: 250px;
+                height: 45px;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: 100px;
+                background: #C6D1D2;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+                margin-bottom: 5px;
+
+            }
+            /*アイコンの＋と×*/
+            .title::before,
+            .title::after{
+                position: absolute;
+                content:'';
+                width: 15px;
+                height: 2px;
+                background-color: #333;
+                
+            }
+            .title::before{
+                top:48%;
+                left: 30px;
+                transform: rotate(0deg);
+                
+            }
+            .title::after{    
+                top:48%;
+                left: 30px;
+                transform: rotate(90deg);
+
+            }
+            /*　closeというクラスがついたら形状変化　*/
+            .title.close::before{
+            transform: rotate(45deg);
+            }
+
+            .title.close::after{
+            transform: rotate(-45deg);
+            }
+
+            /*アコーディオンで現れるエリア*/
+            .times{
+                display: none;/*はじめは非表示*/
+                .pick_time{
+                    font-family: "Noto Sans";
+                    font-size: 2.5rem;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 120%; /* 30px */
+                    letter-spacing: 1.25px;
+
+                    display: flex;
+                    flex-direction: row;
+                    width: 200px;
+                    padding: 10px 30px;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    border-radius: 100px;
+                    background: #C6D1D2;
+
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    margin-top: 10px;
+                }
+                .pick_time.pick{
+                    background-color: #DDF2C3;
+                }
+
+            }
+
+                    }
+                }
+
+
+
 }
 
 /*==========================
@@ -2303,7 +2652,7 @@ payment
 
             .section__title_jp{
                 display: block;
-                font-family: "Noto Sans";
+                font-family: "Noto SansJP";
                 font-size: 2.0rem;
                 font-style: normal;
                 font-weight: 500;
@@ -2326,7 +2675,7 @@ payment
             align-items: center;
             flex-direction: column;
             .dot_title{
-                font-family: "Noto Sans";
+                font-family: "Noto SansJP";
                 font-size: 1.4rem;
                 font-style: normal;
                 font-weight: 400;
@@ -2356,7 +2705,7 @@ payment
 
     .order_txt{
         text-align: center;
-        font-family: "Noto Sans";
+        font-family: "Noto SansJP";
         font-size: 2.0rem;
         font-style: normal;
         font-weight: 500;
@@ -2420,7 +2769,7 @@ payment
         border-top: 1px solid #C6D1D2;
         
         .title{
-            font-family: "Noto Sans";
+            font-family: "Noto SansJP";
             font-size: 2.0rem;
             font-style: normal;
             font-weight: 500;

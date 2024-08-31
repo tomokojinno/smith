@@ -145,7 +145,7 @@
     $(window).on('scroll',function(){
         winScroll = $(window).scrollTop();
         winHeight = $(window).height();
-	    scrollPos = winHeight * 1.1 + winScroll;
+	    scrollPos = winHeight * 0.8 + winScroll;
         // console.log(scrollPos);
         // $(".slidein").each(function(){
         $(".scroll").each(function(){
@@ -174,7 +174,36 @@
         // var s = year + "年" + mon + "月" + day + "日" + hour + "時" + min + "分" + sec + "秒"; 
         var s = year + "." + mon + "." + day; 
         return s;
-}
+    } 
+
+    //アコーディオンをクリックした時の動作
+    $('.title').on('click', function() {//タイトル要素をクリックしたら
+    var findElm = $(this).next(".times");//直後のアコーディオンを行うエリアを取得し
+        $(findElm).slideToggle();//アコーディオンの上下動作
+        
+        if($(this).hasClass('close')){//タイトル要素にクラス名closeがあれば
+        $(this).removeClass('close');//クラス名を除去し
+        }else{//それ以外は
+        $(this).addClass('close');//クラス名closeを付与
+        }
+    });
+    
+    //ページが読み込まれた際にopenクラスをつけ、openがついていたら開く動作※不必要なら下記全て削除
+    $(window).on('load', function(){
+        $('.accordion-area li:first-of-type section').addClass("open"); //accordion-areaのはじめのliにあるsectionにopenクラスを追加
+        $(".open").each(function(index, element){ //openクラスを取得
+        var Title =$(element).children('.title'); //openクラスの子要素のtitleクラスを取得
+        $(Title).addClass('close');       //タイトルにクラス名closeを付与し
+        var Box =$(element).children('.times'); //openクラスの子要素boxクラスを取得
+        $(Box).slideDown(500);          //アコーディオンを開く
+        });
+    });
+
+    $(function(){
+        $('.pick_time').on('click', function(){
+            $(this).toggleClass('pick');
+        });
+    });
 
 
 }

@@ -2877,7 +2877,7 @@ topping
         display: flex;
         flex-direction: column;
         gap: 20px;
-    }
+    
     .topping_order_card_wrap{
         width: 330px;
         height: 56px;
@@ -2919,6 +2919,7 @@ topping
                 letter-spacing: 1.25px;
             } 
         }
+
         label:hover,
         input:checked + label{
             background-color: #C6D1D2;

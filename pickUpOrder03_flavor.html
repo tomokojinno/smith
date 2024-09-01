@@ -49,7 +49,7 @@
       </header>
 
       <main class="main">
-        <article class="article">
+        <article class="article pick_up_order_time pick_up_order_menu">
           <header class="article__header order_header">
             <div class="mainVisual">
               <h1 class="section__title order_time">
@@ -77,22 +77,95 @@
             </div>
           </header>
 
-          <section class="section">
+          <section class="section section--flavor_order">
             <div>
               <h2 class="order_title">Flavor<span class="order_title_jp">フレーバー</span></h2>
               <p class="order_txt">商品を選んでください</p>
-              <div>
-                <!-- 選択個数表示 -->
-                <p>選択中<span id="flavor_num"></span>個</p>
+              <div class="counter_wrap">
+                <div class="counter">
+                  <!-- 選択個数表示 -->
+                  <p>選択中<span id="flavor_num">XXX</span>個</p>
+                </div>
               </div>
-              <div>
-                <!-- ここに展開する選択型ボタン -->
+              <div class="flavor_order_cards">
+                <div class="flavor_order_card_wrap">
+                  <input type="checkbox" name="flavor_order" id="chocolate_order" />
+                  <label for="chocolate_order">
+                    <img src="./images/flavor/circle/circle_chocolate.png" alt="チョコレートフレーバー" />
+                    <h3>Chocolate<span>チョコレート</span></h3>
+                  </label>
+                </div>
+                <div class="flavor_order_card_wrap">
+                  <input type="checkbox" name="flavor_order" id="vanilla_order" />
+                  <label for="vanilla_order">
+                    <img src="./images/flavor/circle/circle_vanilla.png" alt="バニラフレーバー" />
+                    <h3>Vanilla<span>バニラ</span></h3>
+                  </label>
+                </div>
+                <div class="flavor_order_card_wrap">
+                  <input type="checkbox" name="flavor_order" id="mikan_order" />
+                  <label for="mikan_order">
+                    <img src="./images/flavor/circle/circle_mikan.png" alt="みかんフレーバー" />
+                    <h3>Mikan<span>みかん</span></h3>
+                  </label>
+                </div>
+                <div class="flavor_order_card_wrap">
+                  <input type="checkbox" name="flavor_order" id="pistachio_order" />
+                  <label for="pistachio_order">
+                    <img src="./images/flavor/circle/circle_pistachio.png" alt="ピスタチオフレーバー" />
+                    <h3>Pistachio<span>ピスタチオ</span></h3>
+                  </label>
+                </div>
+                <div class="flavor_order_card_wrap">
+                  <input type="checkbox" name="flavor_order" id="mocha_order" />
+                  <label for="mocha_order">
+                    <img src="./images/flavor/circle/circle_mocha.png" alt="モカフレーバー" />
+                    <h3>Mocha<span>モカ</span></h3>
+                  </label>
+                </div>
+                <div class="flavor_order_card_wrap">
+                  <input type="checkbox" name="flavor_order" id="strawberry_order" />
+                  <label for="strawberry_order">
+                    <img src="./images/flavor/circle/circle_strawberry.png" alt="ストロベリーフレーバー" />
+                    <h3>Strawberry<span>ストロベリー</span></h3>
+                  </label>
+                </div>
+                <div class="flavor_order_card_wrap">
+                  <input type="checkbox" name="flavor_order" id="plum_order" />
+                  <label for="plum_order">
+                    <img src="./images/flavor/circle/circle_plum.png" alt="梅フレーバー" />
+                    <h3>Plum<span>梅</span></h3>
+                  </label>
+                </div>
+                <div class="flavor_order_card_wrap">
+                  <input type="checkbox" name="flavor_order" id="lemon_order" />
+                  <label for="lemon_order">
+                    <img src="./images/flavor/circle/circle_lemon.png" alt="レモンフレーバー" />
+                    <h3>Lemon<span>レモン</span></h3>
+                  </label>
+                </div>
+                <div class="flavor_order_card_wrap">
+                  <input type="checkbox" name="flavor_order" id="matcha_order" />
+                  <label for="matcha_order">
+                    <img src="./images/flavor/circle/circle_matcha.png" alt="抹茶フレーバー" />
+                    <h3>Matcha<span>抹茶</span></h3>
+                  </label>
+                </div>
+                <div class="flavor_order_card_wrap">
+                  <input type="checkbox" name="flavor_order" id="guava_order" />
+                  <label for="guava_order">
+                    <img src="./images/flavor/circle/circle_guava.png" alt="グアバフレーバー" />
+                    <h3>Guava<span>グアバ</span></h3>
+                  </label>
+                </div>
               </div>
             </div>
           </section>
+          <section class="section next_btn">
+            <a class="btn btn_return" href="./pickUpOrder02_menu.html">戻る</a>
+            <a class="btn btn_next" href="./pickUpOrder04_topping.html">次へ</a>
+          </section>
         </article>
-        <a class="btn btn_return" href="./pickUpOrder02_menu.html">戻る</a>
-        <a class="btn" href="./pickUpOrder04_topping.html">次へ</a>
       </main>
     </div>
 
@@ -103,4 +176,3 @@
     <script src="./js/main.js"></script>
   </body>
 </html>
-　　　

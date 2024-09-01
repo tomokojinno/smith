@@ -49,10 +49,10 @@
       </header>
 
       <main class="main">
-        <article class="article">
+        <article class="article pick_up_order_time pick_up_order_menu">
           <header class="article__header order_header">
             <div class="mainVisual">
-              <h1 class="section__title order_time">
+              <h1 class="section__title">
                 <span id="view_time"></span>
                 15:00
               </h1>
@@ -78,17 +78,81 @@
           </header>
 
           <section class="section">
-            <div>
-              <h2 class="order_title">Menu<span class="order_title_jp">メニュー</span></h2>
-              <p class="order_txt">商品を選んでください</p>
-              <div>
-                <!-- ここに展開する選択型ボタン -->
+            <h2 class="order_title">Menu<span class="order_title_jp">メニュー</span></h2>
+            <p class="order_txt">商品を選んでください</p>
+            <div class="menu_order_cards">
+              <div class="menu_order_card_wrap">
+                <input id="single_cup_order" type="radio" value="single_cup" name="order" />
+                <label for="single_cup_order">
+                  <h3>Cup<span>カップ</span></h3>
+                  <img src="./images/menu/cup_single.svg" alt="シングルカップ" />
+                  <h4>Single</h4>
+                  <p class="price">¥550</p>
+                </label>
               </div>
+              <div class="menu_order_card_wrap">
+                <input id="double_cup_order" type="radio" value="double_cup" name="order" />
+                <label for="double_cup_order">
+                  <h3>Cup<span>カップ</span></h3>
+                  <img src="./images/menu/cup_double.svg" alt="ダブルカップ" />
+                  <h4>Double</h4>
+                  <p class="price">¥850</p>
+                </label>
+              </div>
+              <div class="menu_order_card_wrap">
+                <input id="single_cone_order" type="radio" value="single_cone" name="order" />
+                <label for="single_cone_order">
+                  <h3>Cone<span>コーン</span></h3>
+                  <img src="./images/menu/corn_single.svg" alt="シングルコーン" />
+                  <h4>Single</h4>
+                  <p class="price">¥600</p>
+                </label>
+              </div>
+              <div class="menu_order_card_wrap">
+                <input id="double_cone_order" type="radio" value="double_cone" name="order" />
+                <label for="double_cone_order">
+                  <h3>Cone<span>コーン</span></h3>
+                  <img src="./images/menu/corn_double.svg" alt="ダブルコーン" />
+                  <h4>Double</h4>
+                  <p class="price">¥900</p>
+                </label>
+              </div>
+              <div class="menu_order_card_wrap">
+                <input id="cookie_sand_order" type="radio" value="cookie_sand" name="order" />
+                <label for="cookie_sand_order">
+                  <h3 class="long">Cookie Sand<span>クッキーサンド</span></h3>
+                  <div class="cookie_sand_img">
+                    <img src="./images/menu/cookie_sand.svg" alt="クッキーサンド" />
+                  </div>
+                  <p class="price">¥1,000</p>
+                </label>
+              </div>
+              <div class="menu_order_card_wrap">
+                <input id="toGo_regular_order" type="radio" value="toGo_regular" name="order" />
+                <label for="toGo_regular_order">
+                  <h3>To Go Cup<span>持ち帰りカップ</span></h3>
+                  <img src="./images/menu/togo_cup.svg" alt="持ち帰りカップ" />
+                  <h4>Regular</h4>
+                  <p class="price">¥550</p>
+                </label>
+              </div>
+              <div class="menu_order_card_wrap">
+                <input id="toGo_pint_order" type="radio" value="toGo_pint" name="order" />
+                <label for="toGo_pint_order">
+                  <h3>To Go Cup<span>持ち帰りカップ</span></h3>
+                  <img src="./images/menu/togo_paint.svg" alt="持ち帰りパイントカップ" />
+                  <h4>Pint</h4>
+                  <p class="price">¥1,600</p>
+                </label>
+              </div>
+              <div class="menu_order_card_wrap"></div>
             </div>
           </section>
+          <section class="section next_btn">
+            <a class="btn btn_return" href="./pickUpOrder01_time.html">戻る</a>
+            <a class="btn btn_next" href="./pickUpOrder03_flavor.html">次へ</a>
+          </section>
         </article>
-        <a class="btn btn_return" href="./pickUpOrder01_time.html">戻る</a>
-        <a class="btn" href="./pickUpOrder03_flavor.html">次へ</a>
       </main>
     </div>
 

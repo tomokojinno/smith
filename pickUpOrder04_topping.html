@@ -49,7 +49,7 @@
       </header>
 
       <main class="main">
-        <article class="article">
+        <article class="article pick_up_order_time pick_up_order_menu">
           <header class="article__header order_header">
             <div class="mainVisual">
               <h1 class="section__title order_time">
@@ -77,22 +77,53 @@
             </div>
           </header>
 
-          <section class="section">
+          <section class="section section--flavor_order">
             <div>
               <h2 class="order_title">Topping<span class="order_title_jp">トッピング</span></h2>
               <p class="order_txt">お好みでトッピングを<br />選んでください</p>
-              <div>
-                <!-- 選択個数表示 -->
-                <p>追加<span id="flavor_num"></span>円</p>
+              <div class="counter_wrap">
+                <div class="counter">
+                  <!-- 選択個数表示 -->
+                  <p>追加<span id="topping_num"> XXX </span>円</p>
+                </div>
               </div>
-              <div>
-                <!-- ここに展開する選択型ボタン -->
+              <div class="topping_order_cards">
+                <div class="topping_order_card_wrap">
+                  <input type="checkbox" name="topping_order" id="chocolate_sauce_order" />
+                  <label for="chocolate_sauce_order">
+                    <h3>Chocolate sauce<span>チョコレートソース</span></h3>
+                    <p class="topping_price">¥50</p>
+                  </label>
+                </div>
+                <div class="topping_order_card_wrap">
+                  <input type="checkbox" name="topping_order" id="caramel_sauce_order" />
+                  <label for="caramel_sauce_order">
+                    <h3>Caramel sauce<span>キャラメルソース</span></h3>
+                    <p class="topping_price">¥50</p>
+                  </label>
+                </div>
+                <div class="topping_order_card_wrap">
+                  <input type="checkbox" name="topping_order" id="crushed_almonds_order" />
+                  <label for="crushed_almonds_order">
+                    <h3>Crushed almonds<span>アーモンド</span></h3>
+                    <p class="topping_price">¥50</p>
+                  </label>
+                </div>
+                <div class="topping_order_card_wrap">
+                  <input type="checkbox" name="topping_order" id="banana_slice_order" />
+                  <label for="banana_slice_order">
+                    <h3>Banana Slice<span>バナナスライス</span></h3>
+                    <p class="topping_price">¥50</p>
+                  </label>
+                </div>
               </div>
             </div>
           </section>
+          <section class="section next_btn">
+            <a class="btn btn_return" href="./pickUpOrder03_flavor.html">戻る</a>
+            <a class="btn btn_next" href="./pickUpOrder05_confirmation.html">次へ</a>
+          </section>
         </article>
-        <a class="btn btn_return" href="./pickUpOrder03_flavor.html">戻る</a>
-        <a class="btn" href="./pickUpOrder05_confirmation.html">次へ</a>
       </main>
     </div>
 

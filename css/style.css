@@ -2420,7 +2420,7 @@ letter-spacing: 1px;
 
         .mainVisual{
             width: 100vw;
-            height: 96vw;   
+            height: 96vw;
             padding: 0px;
             background: none;
             align-items: center;
@@ -2628,8 +2628,12 @@ menu
 
     }
     .article__header{
+        width: 160vw;
+        max-height: 300px;
         .mainVisual{
             height: 157px;
+            max-height: 157px;
+            min-height: 157px;
             img{
                 width: 25px;
                 height: 25px;
@@ -2805,12 +2809,13 @@ Flavor
         flex-wrap: wrap;
         justify-content: center;
         gap: 35px;
+        counter-reset: flavors_counter;
     }
     .flavor_order_card_wrap{
         width: 145px;
         height: 155px;
 
-        .input{
+        input{
             opacity: 0;
             display: block;
         }
@@ -2856,6 +2861,7 @@ Flavor
             background-color: #C6D1D2;
             transform: translateY(4px);
             box-shadow: none;
+            /* counter-increment: flavors_counter; */
         }
 
         input:checked + label::after{
@@ -2865,11 +2871,14 @@ Flavor
             position: absolute;
             left: -8px;
             top: -10px;
-            
         }
+        
     }
-    
 }
+#flavor_num::after{
+    content: counter(flavors_counter);
+}
+
 /*----------------------------
 topping
 ----------------------------*/
@@ -2881,7 +2890,7 @@ topping
     .topping_order_card_wrap{
         width: 330px;
         height: 56px;
-        .input{            
+        input{            
             opacity: 0;
             display: block;
         }

@@ -49,7 +49,7 @@
       </header>
 
       <main class="main">
-        <article class="article">
+        <article class="article pick_up_order_confirmation pick_up_order_time pick_up_order_menu">
           <header class="article__header order_header">
             <div class="mainVisual">
               <h1 class="section__title order_time">Confirmation</h1>
@@ -57,114 +57,116 @@
           </header>
 
           <section class="section">
-            <div>
-              <p class="order_txt">注文内容を確認ください</p>
-              <div class="conf_detail">
-                <div class="conf">
-                  <h2 class="conf_title">Day<span class="conf_title_jp">日付</span></h2>
-                  <p class="conf_data" id="view_time"></p>
-                </div>
-                <div class="conf">
-                  <h2 class="conf_title">Time<span class="conf_title_jp">時間</span></h2>
-                  <p class="conf_data">15:00</p>
-                </div>
-                <div class="conf">
-                  <h2 class="conf_title">Total Payment<span class="conf_title_jp">合計</span></h2>
-                  <p class="conf_data">¥1,450</p>
-                </div>
-                <div class="conf">
-                  <h2 class="conf_title">Order Detail<span class="conf_title_jp">オーダー内容</span></h2>
-                  <!-- <p class="conf_data"></p> -->
-                  <div class="order_cards">
-                    <div class="order_card">
-                      <div class="order_name">
-                        <div class="order_name_col">
-                          <img src="./images/menu/cup_single.svg" alt="シングルカップ" />
-                        </div>
-                        <div class="order_name_col">
-                          <h3>Cup<span>カップ</span></h3>
-                          <h3>Single</h3>
-                        </div>
-                        <div class="order_name_col">
-                          <button>Cancel</button>
-                          <p>¥550</p>
-                        </div>
+            <p class="order_txt">注文内容を確認ください</p>
+            <div class="confirmation_detail">
+              <div class="conf">
+                <h2 class="conf_title">Day<span class="conf_title_jp">日付</span></h2>
+                <p class="conf_data" id="view_time"></p>
+              </div>
+              <div class="conf">
+                <h2 class="conf_title">Time<span class="conf_title_jp">時間</span></h2>
+                <p class="conf_data">15:00</p>
+              </div>
+              <div class="conf">
+                <h2 class="conf_title">Total Payment<span class="conf_title_jp">合計</span></h2>
+                <p class="conf_data">¥1,450</p>
+              </div>
+              <div class="conf">
+                <h2 class="conf_title">Order Detail<span class="conf_title_jp">オーダー内容</span></h2>
+              </div>
+              <div class="order_cards">
+                <div class="order_card">
+                  <div class="detail_order_name">
+                    <div class="order_name_col01">
+                      <img src="./images/menu/cup_single.svg" alt="シングルカップ" />
+                    </div>
+                    <div class="order_name_col02">
+                      <h3>Cup<span>カップ</span></h3>
+                      <h3>Single</h3>
+                    </div>
+                    <div class="order_name_col03">
+                      <div class="cancel_btn">
+                        <button>Cancel</button>
+                        <img src="./images/icon/close.svg" alt="キャンセルボタン" />
                       </div>
-                      <div class="order_flavor">
-                        <h3 class="conf_title">Flavor</h3>
-                        <div class="order_flavor_tag">
-                          <img src="./images/flavor/circle/circle_chocolate.png" alt="チョコフレーバ" />
-                          <h2 class="order_name_title">Chocolate<span class="order_name_title_jp">チョコレート</span></h2>
-                          <button><img src="" alt="変更マーク" /></button>
-                        </div>
-                      </div>
-                      <div>
-                        <h3 class="conf_title">Topping</h3>
-                        <div>
-                          <h2 class="order_name_title">
-                            Chocolate Souce
-                            <span class="order_name_title_jp">チョコレートソース</span>
-                          </h2>
-                          <p>¥50</p>
-                          <button><img src="" alt="キャンセルマーク" /></button>
-                        </div>
-                        <p>add Topping<span>追加</span></p>
-                        <div>
-                          <h2>sub total<span>小計</span></h2>
-                          <p>¥600</p>
-                        </div>
-                      </div>
+                      <p>¥550</p>
                     </div>
                   </div>
-                  <div class="order_cards">
-                    <div class="order_card">
-                      <div class="order_name">
-                        <div class="order_name_col">
-                          <img src="./images/menu/cup_single.svg" alt="シングルカップ" />
-                        </div>
-                        <div class="order_name_col">
-                          <h3>Cup<span>カップ</span></h3>
-                          <h3>Single</h3>
-                        </div>
-                        <div class="order_name_col">
-                          <button>Cancel</button>
-                          <p>¥550</p>
-                        </div>
-                      </div>
-                      <div class="order_flavor">
-                        <h3 class="conf_title">Flavor</h3>
-                        <div class="order_flavor_tag">
-                          <img src="./images/flavor/circle/circle_chocolate.png" alt="チョコフレーバ" />
-                          <h2 class="order_name_title">Chocolate<span class="order_name_title_jp">チョコレート</span></h2>
-                          <button><img src="" alt="変更マーク" /></button>
-                        </div>
-                      </div>
-                      <div>
-                        <h3 class="conf_title">Topping</h3>
-                        <div>
-                          <h2 class="order_name_title">
-                            Chocolate Souce
-                            <span class="order_name_title_jp">チョコレートソース</span>
-                          </h2>
-                          <p>¥50</p>
-                          <button><img src="" alt="キャンセルマーク" /></button>
-                        </div>
-                        <p>add Topping<span>追加</span></p>
-                        <div>
-                          <h2>sub total<span>小計</span></h2>
-                          <p>¥600</p>
-                        </div>
-                      </div>
+                  <div class="detail_order_flavor">
+                    <h3 class="conf_title">Flavor</h3>
+                    <div class="order_flavor_tag">
+                      <img class="flavor_img" src="./images/flavor/circle/circle_chocolate.png" alt="チョコフレーバ" />
+                      <h2 class="order_name_title">Chocolate<span class="order_name_title_jp">チョコレート</span></h2>
+                      <button><img src="./images/icon/btn_change.svg" alt="変更マーク" /></button>
                     </div>
+                  </div>
+                  <div class="detail_order_topping">
+                    <h3 class="conf_title">Topping</h3>
+                    <div class="order_topping_tag">
+                      <h2 class="order_name_title">
+                        Chocolate Source
+                        <span class="order_name_title_jp">チョコレートソース</span>
+                      </h2>
+                      <p class="price">¥50</p>
+                      <button><img src="./images/icon/btn_cancel.svg" alt="キャンセルマーク" /></button>
+                    </div>
+                    <button class="add_btn">add Topping<span>追加</span></button>
+                  </div>
+                  <div class="detail_sub_total">
+                    <h2>sub total<span>小計</span></h2>
+                    <p class="price">¥600</p>
+                  </div>
+                </div>
+                <div class="order_card">
+                  <div class="detail_order_name">
+                    <div class="order_name_col01">
+                      <img src="./images/menu/corn_double.svg" alt="ダブルコーン" />
+                    </div>
+                    <div class="order_name_col02">
+                      <h3>Cone<span>コーン</span></h3>
+                      <h3>Double</h3>
+                    </div>
+                    <div class="order_name_col03">
+                      <div class="cancel_btn">
+                        <button>Cancel</button>
+                        <img src="./images/icon/close.svg" alt="キャンセルボタン" />
+                      </div>
+                      <p>¥850</p>
+                    </div>
+                  </div>
+                  <div class="detail_order_flavor">
+                    <h3 class="conf_title">Flavor</h3>
+                    <div class="order_flavor_tag">
+                      <img class="flavor_img" src="./images/flavor/circle/circle_mikan.png" alt="チョコフレーバ" />
+                      <h2 class="order_name_title">Mikan<span class="order_name_title_jp">みかん</span></h2>
+                      <button><img src="./images/icon/btn_change.svg" alt="変更マーク" /></button>
+                    </div>
+                    <div class="order_flavor_tag">
+                      <img class="flavor_img" src="./images/flavor/circle/circle_strawberry.png" alt="ストロベリーフレーバー" />
+                      <h2 class="order_name_title">Strawberry<span class="order_name_title_jp">ストロベリー</span></h2>
+                      <button><img src="./images/icon/btn_change.svg" alt="変更マーク" /></button>
+                    </div>
+                  </div>
+                  <div class="detail_order_topping">
+                    <h3 class="conf_title">Topping</h3>
+                    <div class="no_topping">
+                      <h3>No Topping</h3>
+                    </div>
+                    <button class="add_btn">add Topping<span>追加</span></button>
+                  </div>
+                  <div class="detail_sub_total">
+                    <h2>sub total<span>小計</span></h2>
+                    <p class="price">¥850</p>
                   </div>
                 </div>
               </div>
             </div>
           </section>
+          <section class="section next_order_btn">
+            <a class="btn" href="./pickUpOrder02_menu.html">追加オーダー</a>
+            <a class="btn to_payment" href="./pickUpOrder06_payment.html">お支払いへ</a>
+          </section>
         </article>
-
-        <a class="btn" href="./pickUpOrder02_menu.html">追加オーダー</a>
-        <a class="btn" href="./pickUpOrder06_payment.html">お支払いへ</a>
       </main>
     </div>
 

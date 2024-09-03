@@ -125,41 +125,62 @@
 
     });
 
-    //scroll_effect
-    // $(window).scroll(function () {
-    //     var scrollAnimationElm = document.querySelectorAll('.scroll');
-    //     var scrollAnimationFunc = function () {
-    //     for (var i = 0; i < scrollAnimationElm.length; i++) {
-    //         var triggerMargin = 50;
-    //         if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
-    //         scrollAnimationElm[i].classList.add('on');
-    //         }
-    //     }
-    //     }
-    //     window.addEventListener('load', scrollAnimationFunc);
-    //     window.addEventListener('scroll', scrollAnimationFunc);
-    // });
 
     let winHeight,winScroll,scrollPos;
     // $(window).on('load scroll',function(){
     $(window).on('scroll',function(){
-        winScroll = $(window).scrollTop();
+        winScroll = $(window).scrollTop();//スクロールした距離を取得
         winHeight = $(window).height();
-	    scrollPos = winHeight * 0.8 + winScroll;
+	    scrollPos = winHeight * 0.9 + winScroll;
         // console.log(scrollPos);
         // $(".slidein").each(function(){
+        //ページ上部からの距離を取得
         $(".scroll").each(function(){
-            if($(this).offset().top <= scrollPos){
+            if($(this).offset().top <= (scrollPos)){
                 $(this).addClass("on");
             }else{
                 $(this).removeClass("on");
             }
-            console.log(scrollPos, $(this).offset().top);
+            // console.log(scrollPos, $(this).offset().top);
+        });
+        $(".fuwafuwa").each(function(){
+            if($(this).offset().top <= (scrollPos)){
+                $(this).addClass("on");
+            }else{
+                $(this).removeClass("on");
+            }
+            // console.log(scrollPos, $(this).offset().top);
+        });
+        $(".slide_in").each(function(){
+            if($(this).offset().top <= (scrollPos)){
+                $(this).addClass("in");
+            }else{
+                $(this).removeClass("in");
+            }
+            // console.log(scrollPos, $(this).offset().top);
         });
     });
 
+    // $(window).on('scroll',function(){
+    //     winScroll = $(window).scrollTop();//スクロールした距離を取得
+    //     winHeight = $(window).height();
+	//     scrollPos = winHeight * 0.9 + winScroll;
+    //     // console.log(scrollPos);
+    //     // $(".slidein").each(function(){
+    //     //ページ上部からの距離を取得
+    //     $(".fuwafuwa").each(function(){
+    //         if($(this).offset().top <= (scrollPos)){
+    //             $(this).addClass("on");
+    //         }else{
+    //             $(this).removeClass("on");
+    //         }
+    //         // console.log(scrollPos, $(this).offset().top);
+    //     });
+    // });
+
     // 日付取得して表示
-    document.getElementById("view_time").innerHTML = getNow();
+    var today_date = getNow();
+    document.getElementById("view_time").innerHTML = today_date;
 
     function getNow() {
         var now = new Date();
@@ -205,5 +226,65 @@
         });
     });
 
+
+
+    // counter_wrapを上部に固定する
+    $(function(){
+        var scrollStart = $('.counter_wrap').offset().top; //ページ上部からの距離を取得
+        var distance = 0;
+        $(document).scroll(function(){
+          distance = $(this).scrollTop(); //スクロールした距離を取得
+          if (scrollStart <= (distance + 80)) { //スクロール距離が『.sikaku_box』の位置を超えたら
+            $('.counter_wrap').addClass('fixed'); //class『fixed』を追加
+          } else if (scrollStart >= distance) { //スクロールがページ上部まで戻ったら
+            $('.counter_wrap').removeClass('fixed'); //class『fixed』を削除
+            }
+        });
+    });
+
+    function countChecks(){
+        const el = document.getElementsByName("flavor_order");
+        let count = 0;
+        for (let i = 0; i < el.length; i++) {
+            // チェックされている数をカウント
+            if (el[i].checked) {
+                count++;
+            }
+        }
+        console.log(count);
+        document.getElementById("flavor_num").innerHTML = count;
+    }
+
+    // document.getElementById("flavor_num").innerHTML = 0;
+    $(function(){
+        $('.flavor_order').on('click', function(){
+            const el = document.getElementsByName("flavor_order");
+            let count = 0;
+            for (let i = 0; i < el.length; i++) {
+                // チェックされている数をカウント
+                if (el[i].checked) {
+                    count++;
+                }
+            }
+            // console.log(count);
+            document.getElementById("flavor_num").innerHTML = count;
+        });
+    });
+
+    // document.getElementById("topping_num").innerHTML = 0;
+    $(function(){
+        $('.topping_order_check').on('click', function(){
+            const el = document.getElementsByName("topping_order");
+            let count = 0;
+            for (let i = 0; i < el.length; i++) {
+                // チェックされている数をカウント
+                if (el[i].checked) {
+                    count++;
+                }
+            }
+            // console.log(count);
+            document.getElementById("topping_num").innerHTML = count*50;
+        });
+    })
 
 }

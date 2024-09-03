@@ -579,7 +579,8 @@ main
 }
 .keyVisual{
     position: absolute;
-    transform: translate(-3vw);
+    translate: -3vw;
+    /* transform: translate(-3vw); */
     left: 0;
     min-width: 100%;
     top: 60px;
@@ -592,8 +593,10 @@ main
     padding: 2vw 15% 0 15%;
     width: 100%;
     right: 50%;
-    transform: translateX(50%);
+    /* transform: translateX(50%); */
+    translate: 50% 0;
 }
+
 .shopTitle img{
     min-width: 100%;
 }
@@ -957,12 +960,13 @@ main
                     line-height: normal;
                     letter-spacing: 0.065rem;
                 
-                    background-color: #DDF2C3;
+                    background-color: #FFF;
                     text-align: center;
                     border-radius: 3px;
                 
                     margin-bottom: 20px;
-                    opacity: 0;
+                    opacity: 1;
+                    border: #05343B 1px solid;
                 }
                 .flavor_seasonal_tag.seasonal_tag{
                     display: block;
@@ -1016,7 +1020,7 @@ main
                 
                 }
                 .flavor_desc{
-                    
+                    display: inline-block;
                     padding: 30px 5px 10px;
                     /* text-indent: 1.8rem; */
                     font-size: 1.4rem;
@@ -1932,21 +1936,6 @@ footer
 }
 
 
-/*----------------------------
-scroll_up ｜下から上へ出現
-----------------------------*/
-.scroll {
-    transition: 1.2s ease-in-out;
-    transform: translateY(80px);
-    opacity: 0.0;
-}
-.scroll.on {
-    transform: translateY(0);
-    opacity: 1.0;
-}
-
-
-
 /*==========================
 about
 ==========================*/
@@ -2043,6 +2032,8 @@ about
             display: flex;
             flex-wrap: wrap;
             gap: 40px;
+            justify-content: center;
+
             .passion_card{
                 width: 325px;
                 height: 353px;
@@ -2098,7 +2089,7 @@ about
         width: 250vw;
         background-color: #DDF2C3;
         border-radius: 50% 50% 0 0;
-        transform: translateX(-75vw); /* (width-100vw/2) */
+        translate: -75vw 0; /* (width-100vw/2) */
         .section__title{
             margin-bottom: 50px;
         }
@@ -2372,6 +2363,13 @@ flavor
                 background-color: #D9FAFF;
                 padding: 9px 14px;
                 border-radius: 0px 0px 15px 15px;
+                .flavor_desc{
+                    /* text-indent: 0.8rem; */
+                    
+                    span{
+                        display: inline-block;
+                    }
+                }
             }
         }
     }
@@ -2545,7 +2543,7 @@ letter-spacing: 1px;
                 align-items: center;
 
                 border-radius: 100px;
-                background: #C6D1D2;
+                background: #DDF2C3;
                 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
                 margin-bottom: 5px;
@@ -2601,13 +2599,13 @@ letter-spacing: 1px;
                     align-items: center;
 
                     border-radius: 100px;
-                    background: #C6D1D2;
+                    background: #DDF2C3;
 
                     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
                     margin-top: 10px;
                 }
                 .pick_time.pick{
-                    background-color: #DDF2C3;
+                    background-color: #e8f0f0;
                 }
 
             }
@@ -2728,7 +2726,7 @@ menu
 
         label:hover,
         input:checked + label{
-            background-color: #C6D1D2;
+            background-color: #e8f0f0;
             transform: translateY(4px);
             box-shadow: none;
         }
@@ -2755,7 +2753,7 @@ menu
         .btn_return{
             width: 120px;
             height: 58px;
-            background-color: #C6D1D2;
+            background-color: #e8f0f0;
             position: relative;
             padding-left: 20px;
         }
@@ -2793,6 +2791,7 @@ Flavor
         justify-content: center;
         .counter{
             display: flex;
+            flex-direction: row;
             width: 143px;
             height: 52px;
             padding: 12px 9px;
@@ -2801,9 +2800,18 @@ Flavor
             gap: 10px;
             
             border-radius: 100px;
-            background: #C6D1D2;
-    
+            background: #e8f0f0;
+            span{
+                font-family: "Noto Sans";
+                font-size: 2rem;
+                padding: 0 10px;
+            }
         }
+    }
+    .counter_wrap.fixed{
+        position: fixed;
+        top: 80px;
+        z-index: 1;
     }
     .flavor_order_cards{
         display: flex;
@@ -2859,7 +2867,7 @@ Flavor
 
         label:hover,
         input:checked + label{
-            background-color: #C6D1D2;
+            background-color: #e8f0f0;
             transform: translateY(4px);
             box-shadow: none;
         }
@@ -2929,7 +2937,7 @@ topping
 
         label:hover,
         input:checked + label{
-            background-color: #C6D1D2;
+            background-color: #e8f0f0;
             transform: translateY(4px);
             box-shadow: none;
         }
@@ -3506,5 +3514,100 @@ payment
                 }
             }
         }
+    }
+}
+
+
+/*----------------------------
+scroll_up ｜下から上へ出現
+----------------------------*/
+.scroll {
+    transition: 0.7s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0.0;
+}
+.scroll.on {
+    transform: translateY(0);
+    opacity: 1.0;
+}
+
+.slide_in{
+    transition: 1.4s ease-in-out;
+    transform: translateX(50vw);
+    opacity: 0.0;
+}
+.slide_in.in{
+    transform: translateX(0);
+    opacity: 1.0;
+}
+
+.fuwafuwa.on{
+    /* animation: fuwafuwa 3s ease-in-out infinite alternate; */
+    animation: wiggle 2s linear infinite;
+    transition: 1s ease-in-out;
+}
+
+@keyframes fuwafuwa {
+    0% {
+        transform:translate(0, 0) rotate(-5deg);
+    }
+    50% {
+        transform:translate(0, -4px) rotate(0deg);
+        /* scale: 103%; */
+    }
+    100% {
+        transform:translate(0, 0) rotate(5deg);
+    }
+}
+
+@keyframes wiggle {
+    0%, 7% {
+        transform: rotateZ(0);
+    }
+    15% {
+        transform: rotateZ(-15deg);
+    }
+    20% {
+        transform: rotateZ(10deg);
+    }
+    25% {
+        transform: rotateZ(-10deg);
+    }
+    30% {
+        transform: rotateZ(6deg);
+    }
+    35% {
+        transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+        transform: rotateZ(0);
+    }
+}
+.top_waggle{
+    /* animation: fuwafuwa 3s ease-in-out infinite alternate; */
+    animation: top_wiggle 5s linear infinite;
+    transition: 1s ease-in-out;
+}
+@keyframes top_wiggle {
+    0%, 7% {
+        transform: rotateZ(0);
+    }
+    15% {
+        transform: rotateZ(-5deg);
+    }
+    20% {
+        transform: rotateZ(3deg);
+    }
+    25% {
+        transform: rotateZ(-3deg);
+    }
+    30% {
+        transform: rotateZ(2deg);
+    }
+    35% {
+        transform: rotateZ(-1deg);
+    }
+    40%, 100% {
+        transform: rotateZ(0);
     }
 }

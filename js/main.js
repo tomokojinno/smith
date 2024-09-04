@@ -287,4 +287,13 @@
         });
     })
 
+    // $(window).resize(function(){
+    //     var w = $(window).width();
+    //     var x = 768;
+    //     if (w <= x) {
+    //             // 568px以下のときの処理
+    //     } else {
+    //       // 569px以上のときの処理
+    // });
+
 }

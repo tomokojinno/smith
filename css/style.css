@@ -725,7 +725,8 @@ main
     }
     .keyVisual{
         position: absolute;
-        transform: translate(-1vw);
+        /* transform: translate(-1vw); */
+        translate: -1vw;
         padding: 2.4vw 50vw 0 13vw;
         width: 100%;
         left: 0;
@@ -740,7 +741,8 @@ main
         padding: 4.17vw 55% 0 17.5%;
         width: 100%;
         right: 50%;
-        transform: translateX(50%);
+        /* transform: translateX(50%); */
+        translate: 50% 0;
     }
     .shopTitle img{
         min-width: 100%;
@@ -3589,25 +3591,62 @@ scroll_up ｜下から上へ出現
     transition: 1s ease-in-out;
 }
 @keyframes top_wiggle {
-    0%, 7% {
+    0%, 3% {
         transform: rotateZ(0);
     }
-    15% {
+    8% {
         transform: rotateZ(-5deg);
     }
-    20% {
+    10% {
         transform: rotateZ(3deg);
     }
-    25% {
+    13% {
         transform: rotateZ(-3deg);
     }
-    30% {
+    15% {
         transform: rotateZ(2deg);
     }
-    35% {
+    18% {
         transform: rotateZ(-1deg);
     }
-    40%, 100% {
+    20%, 100% {
         transform: rotateZ(0);
     }
 }
+
+
+
+/* @media screen and (min-width:769px) {
+    .ps_scroll{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+    .article{
+        overflow: visible;
+    }
+    .ps_scroll01{
+        z-index: -100;
+    }
+    .ps_scroll02{
+        z-index: -90;
+        background-color: #FFF;
+    }
+    .ps_scroll03{
+        z-index: -80;
+    }
+    .ps_scroll04{
+        z-index: -70;
+        background-color: #FFF;
+    }
+    .ps_scroll05{
+        z-index: -60;
+    }
+    .ps_scroll06{
+        z-index: -50;
+        background-color: #FFF;
+    }
+    .ps_scroll07{
+        z-index: -40;
+    }
+} */

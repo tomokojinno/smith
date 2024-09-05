@@ -52,7 +52,7 @@
             $('#tab_seasonal').addClass('active');
         });    
     });
- 
+
     $(function(){
         $('.flavor_cards').slick({
             arrows: true, // 前・次のボタンを表示する
@@ -231,29 +231,31 @@
     // counter_wrapを上部に固定する
     $(function(){
         var scrollStart = $('.counter_wrap').offset().top; //ページ上部からの距離を取得
-        var distance = 0;
+        var distance = $(document).scrollTop();
         $(document).scroll(function(){
-          distance = $(this).scrollTop(); //スクロールした距離を取得
-          if (scrollStart <= (distance + 80)) { //スクロール距離が『.sikaku_box』の位置を超えたら
-            $('.counter_wrap').addClass('fixed'); //class『fixed』を追加
-          } else if (scrollStart >= distance) { //スクロールがページ上部まで戻ったら
-            $('.counter_wrap').removeClass('fixed'); //class『fixed』を削除
+            console.log(scrollStart)
+            console.log(distance)
+            distance = $(document).scrollTop();
+            if (scrollStart <= (distance + 90)) { //スクロール距離が『.sikaku_box』の位置を超えたら
+                $('.counter_wrap').addClass('fixed'); //class『fixed』を追加
+            } else if (scrollStart >= distance) { //スクロールがページ上部まで戻ったら
+                $('.counter_wrap').removeClass('fixed'); //class『fixed』を削除
             }
         });
     });
 
-    function countChecks(){
-        const el = document.getElementsByName("flavor_order");
-        let count = 0;
-        for (let i = 0; i < el.length; i++) {
-            // チェックされている数をカウント
-            if (el[i].checked) {
-                count++;
-            }
-        }
-        console.log(count);
-        document.getElementById("flavor_num").innerHTML = count;
-    }
+    // function countChecks(){
+    //     const el = document.getElementsByName("flavor_order");
+    //     let count = 0;
+    //     for (let i = 0; i < el.length; i++) {
+    //         // チェックされている数をカウント
+    //         if (el[i].checked) {
+    //             count++;
+    //         }
+    //     }
+    //     console.log(count);
+    //     document.getElementById("flavor_num").innerHTML = count;
+    // };
 
     // document.getElementById("flavor_num").innerHTML = 0;
     $(function(){
@@ -285,7 +287,7 @@
             // console.log(count);
             document.getElementById("topping_num").innerHTML = count*50;
         });
-    })
+    });
 
     // $(window).resize(function(){
     //     var w = $(window).width();

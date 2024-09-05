@@ -2957,6 +2957,10 @@ topping
 
 }
 
+#topping_next_btn{
+    padding-bottom: 200px;
+}
+
 /*----------------------------
 confirmation
 ----------------------------*/
@@ -2976,6 +2980,7 @@ confirmation
 
     .next_order_btn{
         padding-top: 40px;
+        padding-bottom: 200px;
         display: flex;
         flex-direction: column;
         gap: 10px;
